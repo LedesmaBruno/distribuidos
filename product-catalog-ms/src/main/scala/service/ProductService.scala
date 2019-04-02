@@ -1,4 +1,8 @@
+package service
+
 import catalog.product.{GetProductReply, GetProductRequest, Product, ProductServiceGrpc}
+import common.healthcheck.HealthCheckServiceGrpc
+import io.grpc.netty.NettyServerBuilder
 import io.grpc.{ManagedChannelBuilder, ServerBuilder}
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -18,7 +22,6 @@ object ProductServiceServer extends App {
   val server = ServerBuilder.forPort(50000)
     .addService(ProductServiceGrpc.bindService(new ProductService(), ExecutionContext.global))
     .build()
-
 
   server.start()
   println("Running...")
