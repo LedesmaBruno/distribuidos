@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package common;
+
+service HealthCheckService {
+    rpc HealthCheck (Ping) returns (Pong) {}
+}
+
+message Ping {
+}
+
+message Pong {
+}
