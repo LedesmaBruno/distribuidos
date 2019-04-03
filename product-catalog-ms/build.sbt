@@ -18,4 +18,3 @@ PB.targets in Compile := Seq(
 )
 
 PB.protoSources in Compile += target.value / "../../protobuf/product-catalog"
-PB.protoSources in Compile += target.value / "../../protobuf/common"
