@@ -1,0 +1,58 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/WishlistService.fsproj",
+    "projectName": "WishlistService",
+    "projectPath": "/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/WishlistService.fsproj",
+    "outputPath": "/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/GrpcWishlist/GrpcWishlist.csproj": {
+            "projectPath": "/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/GrpcWishlist/GrpcWishlist.csproj"
+          }
+        }
+      }
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "FSharp.Core": {
+          "target": "Package",
+          "version": "[4.5.2, )"
+        },
+        "Google.Protobuf": {
+          "target": "Package",
+          "version": "[3.7.0, )"
+        },
+        "Grpc": {
+          "target": "Package",
+          "version": "[1.19.0, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "ServiceStack.Redis": {
+          "target": "Package",
+          "version": "[5.5.0, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

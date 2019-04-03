@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="GrpcService.fs" />
+        <Compile Include="RedisService.fs" />
+        <Compile Include="WishlistServiceImpl.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Google.Protobuf" Version="3.7.0" />
+        <PackageReference Include="Grpc" Version="1.19.0" />
+        <PackageReference Include="ServiceStack.Redis" Version="5.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\GrpcWishlist\GrpcWishlist.csproj">
+            <Name>GrpcWishlist</Name>
+        </ProjectReference>
+    </ItemGroup>
+
+</Project>

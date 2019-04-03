@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bfc45346-4601-4a4b-a2ed-e16d0c360605" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/GrpcWishlist/wishlist.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WishlistApp/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WishlistApp/Program.fs" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GrpcWishlist/GrpcWishlist.csproj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="13" column="92" selection-start-line="13" selection-start-column="92" selection-end-line="13" selection-end-column="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WishlistApp/Program.fs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding>
+                <marker date="1554243588978" expanded="true" signature="26:596" ph=" ..." />
+                <marker date="1554243588978" expanded="true" signature="33:54" ph="..." />
+                <marker date="1554243588978" expanded="true" signature="70:596" ph=" =  ..." />
+                <marker date="1554243588978" expanded="true" signature="83:140" ph="..." />
+                <marker date="1554243588978" expanded="true" signature="178:596" ph=" =  ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WishlistService/WishlistService.fsproj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/share/dotnet/sdk/2.2.105/Roslyn/Microsoft.CSharp.Core.targets">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WishlistApp/WishlistApp.fsproj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WishlistApp/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="11" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WishlistService/RedisService.fs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+              <folding>
+                <marker date="1554239037590" expanded="true" signature="35:259" ph=" ..." />
+                <marker date="1554239037590" expanded="false" signature="41:71" ph="..." />
+                <marker date="1554239037590" expanded="true" signature="188:259" ph=" = ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WishlistService/GrpcService.fs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="6" column="115" selection-start-line="6" selection-start-column="115" selection-end-line="6" selection-end-column="115" />
+              <folding>
+                <marker date="1554240793232" expanded="true" signature="34:414" ph=" ..." />
+                <marker date="1554240793232" expanded="false" signature="40:79" ph="..." />
+                <marker date="1554240793232" expanded="true" signature="238:414" ph=" = ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GrpcWishlist/WishlistGrpc.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-390">
+              <caret line="157" column="56" selection-start-line="157" selection-start-column="56" selection-end-line="157" selection-end-column="56" />
+              <folding>
+                <marker date="1554243043172" expanded="true" signature="0:134" ph="/* &lt;auto-generated&gt; ... */" />
+                <marker date="1554243043172" expanded="true" signature="170:11759" ph="Designer generated code" />
+                <marker date="1554243043172" expanded="true" signature="259:11748" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="306:6087" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="1467:1564" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="1708:2016" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="1901:2009" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="2160:4834" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="2173:2317" ph="///Creates a new client for WishlistService ... " />
+                <marker date="1554243043172" expanded="true" signature="2391:2407" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="2414:2605" ph="///Creates a new client for WishlistService that uses a custom &lt;c&gt;CallInvoker&lt;/c&gt;. ... " />
+                <marker date="1554243043172" expanded="true" signature="2691:2707" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="2856:2872" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="2879:3036" ph="///Protected constructor to allow creation of configured clients. ... " />
+                <marker date="1554243043172" expanded="true" signature="3135:3151" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="3458:3572" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="3716:3824" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="4157:4276" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="4447:4552" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="4755:4828" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="4840:5023" ph="///Creates service definition that can be registered with a server ... " />
+                <marker date="1554243043172" expanded="true" signature="5116:5264" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="5270:5750" ph="///Register service method with a service binder with or without implementation. Useful when customizing the  ser ... " />
+                <marker date="1554243043172" expanded="true" signature="5857:6082" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="6130:11746" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="7246:7343" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="7481:7780" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="7665:7773" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="7915:10517" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="7928:8069" ph="///Creates a new client for ItemsService ... " />
+                <marker date="1554243043172" expanded="true" signature="8140:8156" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="8163:8351" ph="///Creates a new client for ItemsService that uses a custom &lt;c&gt;CallInvoker&lt;/c&gt;. ... " />
+                <marker date="1554243043172" expanded="true" signature="8434:8450" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="8596:8612" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="8619:8776" ph="///Protected constructor to allow creation of configured clients. ... " />
+                <marker date="1554243043172" expanded="true" signature="8872:8888" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="9186:9297" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="9432:9537" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="9861:9977" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="10139:10241" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="10441:10511" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="10523:10706" ph="///Creates service definition that can be registered with a server ... " />
+                <marker date="1554243043172" expanded="true" signature="10796:10938" ph="{...}" />
+                <marker date="1554243043172" expanded="true" signature="10944:11424" ph="///Register service method with a service binder with or without implementation. Useful when customizing the  ser ... " />
+                <marker date="1554243043172" expanded="true" signature="11528:11741" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Wish</find>
+      <find>Wishlist.cs</find>
+      <find>&lt;Compile</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/WishlistService/GrpcService.fs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WishlistService/WishlistServiceImpl.fs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WishlistService/RedisService.fs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WishlistApp/Program.fs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GrpcWishlist/Wishlist.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GrpcWishlist/WishlistGrpc.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/GrpcWishlist/Class1.cs" />
+        <option value="$PROJECT_DIR$/WishlistService/WishlistService.fsproj" />
+        <option value="$PROJECT_DIR$/GrpcWishlist/wishlist.proto" />
+        <option value="$PROJECT_DIR$/WishlistService/RedisService.fs" />
+        <option value="$PROJECT_DIR$/WishlistService/WishlistServiceImpl.fs" />
+        <option value="$PROJECT_DIR$/WishlistApp/Dockerfile" />
+        <option value="$PROJECT_DIR$/WishlistService/GrpcService.fs" />
+        <option value="$PROJECT_DIR$/GrpcWishlist/GrpcWishlist.csproj" />
+        <option value="$PROJECT_DIR$/WishlistApp/Main.fs" />
+        <option value="$PROJECT_DIR$/WishlistApp/WishlistApp.fsproj" />
+        <option value="$PROJECT_DIR$/WishlistApp/Program.fs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="WishlistServer" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="WishlistServer" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WishlistService" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration name="Publish WishlistApp to folder" type="DotNetFolderPublish" factoryName="Publish to folder" temporary="true">
+      <riderPublish uuid_high="-5762082706512658011" uuid_low="-6271816939469292114" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/WishlistApp/bin/Debug/netcoreapp2.2/WishlistApp.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WishlistApp" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/WishlistApp/WishlistApp.fsproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.2" />
+      <browser url="http://localhost:5000" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue=".NET Project.Default" />
+      <item itemvalue="Publish to folder.Publish WishlistApp to folder" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Publish to folder.Publish WishlistApp to folder" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfc45346-4601-4a4b-a2ed-e16d0c360605" name="Default Changelist" comment="" />
+      <created>1554234552295</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554234552295</updated>
+      <workItem from="1554234553447" duration="338000" />
+      <workItem from="1554234911006" duration="169000" />
+      <workItem from="1554235084722" duration="4206000" />
+      <workItem from="1554240368179" duration="2661000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7374000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23535676" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32891566" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.54653466" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/GrpcWishlist/Class1.cs" />
+    <entry file="file://$PROJECT_DIR$/WishlistService/Library.fs" />
+    <entry file="file://$PROJECT_DIR$/GrpcWishlist/Wishlist.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-737">
+          <caret line="538" column="11" selection-start-line="538" selection-start-column="11" selection-end-line="538" selection-end-column="11" />
+          <folding>
+            <marker date="1554243043172" expanded="true" signature="0:134" ph="/* &lt;auto-generated&gt; ... */" />
+            <marker date="1554243043172" expanded="true" signature="176:25703" ph="Designer generated code" />
+            <marker date="1554243043172" expanded="false" signature="215:389" ph="..." />
+            <marker date="1554243043172" expanded="true" signature="413:25667" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="554:2781" ph="{...}" />
+            <marker date="1554243043172" expanded="false" signature="561:2776" ph="Descriptor" />
+            <marker date="1554243043172" expanded="true" signature="691:731" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="816:2761" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="1896:2752" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="2784:25664" ph="Messages" />
+            <marker date="1554243043172" expanded="true" signature="2879:6758" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="3336:3432" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="3547:3587" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="3680:3711" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="3870:3972" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="4071:4118" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="4321:4395" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="4359:4389" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="4505:4559" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="4669:4918" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="4711:4742" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="4783:4813" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="5020:5201" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="5121:5176" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="5303:5367" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="5485:5667" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="5506:5577" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="5612:5661" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="5762:5993" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="5803:5876" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="5911:5968" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="6106:6314" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="6133:6158" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="6184:6216" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="6432:6753" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="6493:6747" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="6515:6739" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="6840:10969" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="7301:7397" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="7512:7552" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="7646:7677" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="7838:7954" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="8054:8102" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="8631:8667" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="8777:8832" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="8943:9205" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="8985:9016" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="9057:9087" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="9307:9479" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="9399:9454" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="9581:9645" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="9763:9907" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="9852:9901" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="10002:10199" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="10117:10174" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="10313:10495" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="10340:10365" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="10613:10964" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="10674:10958" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="10696:10950" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="11027:17470" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="11440:11536" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="11651:11691" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="11773:11804" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="11941:12140" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="12228:12264" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="12467:12541" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="12505:12535" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="12763:12887" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="12803:12881" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="13137:13275" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="13184:13269" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="13494:13574" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="13535:13568" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="13684:13727" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="13826:14291" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="13868:13899" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="13940:13970" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="14393:14812" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="14732:14787" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="14914:14978" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="15096:15599" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="15117:15188" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="15217:15292" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="15328:15410" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="15434:15509" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="15544:15593" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="15694:16205" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="15735:15808" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="15837:15913" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="15949:16032" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="16056:16088" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="16123:16180" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="16307:16746" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="16334:16359" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="16385:16417" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="16452:16488" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="16530:16580" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="16610:16648" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="16864:17465" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="16925:17459" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="16947:17451" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="17544:21481" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="17989:18085" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="18200:18240" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="18330:18361" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="18514:18626" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="18722:18766" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="19161:19195" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="19305:19356" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="19463:19721" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="19505:19536" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="19577:19607" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="19823:19993" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="19913:19968" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="20095:20159" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="20277:20417" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="20362:20411" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="20512:20705" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="20623:20680" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="20815:20993" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="20842:20867" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="21111:21476" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="21172:21470" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="21194:21462" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="21557:25650" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="22006:22102" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="22217:22257" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="22348:22379" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="22534:22650" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="22747:22792" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="23321:23357" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="23467:23519" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="23627:23889" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="23669:23700" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="23741:23771" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="23991:24163" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="24083:24138" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="24265:24329" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="24447:24591" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="24536:24585" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="24686:24883" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="24801:24858" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="24994:25176" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="25021:25046" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="25294:25645" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="25355:25639" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="25377:25631" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WishlistApp/Library.fs" />
+    <entry file="file://$PROJECT_DIR$/GrpcWishlist/wishlist.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WishlistService/WishlistServiceImpl.fs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding>
+            <marker date="1554239037593" expanded="false" signature="32:87" ph="..." />
+            <marker date="1554239037593" expanded="true" signature="115:611" ph=" = ..." />
+            <marker date="1554239037593" expanded="true" signature="147:611" ph=") = ..." />
+            <marker date="1554239037593" expanded="true" signature="302:611" ph=" : Task&lt;WishlistResponse&gt; = ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WishlistApp/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WishlistService/RedisService.fs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <marker date="1554239037590" expanded="true" signature="35:259" ph=" ..." />
+            <marker date="1554239037590" expanded="false" signature="41:71" ph="..." />
+            <marker date="1554239037590" expanded="true" signature="188:259" ph=" = ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GrpcWishlist/WishlistGrpc.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390">
+          <caret line="157" column="56" selection-start-line="157" selection-start-column="56" selection-end-line="157" selection-end-column="56" />
+          <folding>
+            <marker date="1554243043172" expanded="true" signature="0:134" ph="/* &lt;auto-generated&gt; ... */" />
+            <marker date="1554243043172" expanded="true" signature="170:11759" ph="Designer generated code" />
+            <marker date="1554243043172" expanded="true" signature="259:11748" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="306:6087" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="1467:1564" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="1708:2016" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="1901:2009" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="2160:4834" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="2173:2317" ph="///Creates a new client for WishlistService ... " />
+            <marker date="1554243043172" expanded="true" signature="2391:2407" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="2414:2605" ph="///Creates a new client for WishlistService that uses a custom &lt;c&gt;CallInvoker&lt;/c&gt;. ... " />
+            <marker date="1554243043172" expanded="true" signature="2691:2707" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="2856:2872" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="2879:3036" ph="///Protected constructor to allow creation of configured clients. ... " />
+            <marker date="1554243043172" expanded="true" signature="3135:3151" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="3458:3572" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="3716:3824" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="4157:4276" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="4447:4552" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="4755:4828" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="4840:5023" ph="///Creates service definition that can be registered with a server ... " />
+            <marker date="1554243043172" expanded="true" signature="5116:5264" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="5270:5750" ph="///Register service method with a service binder with or without implementation. Useful when customizing the  ser ... " />
+            <marker date="1554243043172" expanded="true" signature="5857:6082" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="6130:11746" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="7246:7343" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="7481:7780" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="7665:7773" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="7915:10517" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="7928:8069" ph="///Creates a new client for ItemsService ... " />
+            <marker date="1554243043172" expanded="true" signature="8140:8156" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="8163:8351" ph="///Creates a new client for ItemsService that uses a custom &lt;c&gt;CallInvoker&lt;/c&gt;. ... " />
+            <marker date="1554243043172" expanded="true" signature="8434:8450" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="8596:8612" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="8619:8776" ph="///Protected constructor to allow creation of configured clients. ... " />
+            <marker date="1554243043172" expanded="true" signature="8872:8888" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="9186:9297" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="9432:9537" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="9861:9977" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="10139:10241" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="10441:10511" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="10523:10706" ph="///Creates service definition that can be registered with a server ... " />
+            <marker date="1554243043172" expanded="true" signature="10796:10938" ph="{...}" />
+            <marker date="1554243043172" expanded="true" signature="10944:11424" ph="///Register service method with a service binder with or without implementation. Useful when customizing the  ser ... " />
+            <marker date="1554243043172" expanded="true" signature="11528:11741" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/share/dotnet/sdk/2.2.105/Roslyn/Microsoft.CSharp.Core.targets">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WishlistService/GrpcService.fs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="115" selection-start-line="6" selection-start-column="115" selection-end-line="6" selection-end-column="115" />
+          <folding>
+            <marker date="1554240793232" expanded="true" signature="34:414" ph=" ..." />
+            <marker date="1554240793232" expanded="false" signature="40:79" ph="..." />
+            <marker date="1554240793232" expanded="true" signature="238:414" ph=" = ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GrpcWishlist/GrpcWishlist.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="13" column="92" selection-start-line="13" selection-start-column="92" selection-end-line="13" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WishlistApp/Main.fs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WishlistApp/WishlistApp.fsproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WishlistService/WishlistService.fsproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Logs/Rider2018.3/SolutionBuilder/JetBrainsLog.ReSharperBuild_2019_04_02_21_30_57_0662.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22978" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WishlistApp/Program.fs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <marker date="1554243588978" expanded="true" signature="26:596" ph=" ..." />
+            <marker date="1554243588978" expanded="true" signature="33:54" ph="..." />
+            <marker date="1554243588978" expanded="true" signature="70:596" ph=" =  ..." />
+            <marker date="1554243588978" expanded="true" signature="83:140" ph="..." />
+            <marker date="1554243588978" expanded="true" signature="178:596" ph=" =  ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

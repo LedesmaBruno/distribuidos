@@ -1,0 +1,9 @@
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/GrpcWishlist/bin/Debug/netcoreapp2.2/GrpcWishlist.deps.json
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/GrpcWishlist/bin/Debug/netcoreapp2.2/GrpcWishlist.dll
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/GrpcWishlist/bin/Debug/netcoreapp2.2/GrpcWishlist.pdb
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/GrpcWishlist/obj/Debug/netcoreapp2.2/GrpcWishlist.csprojAssemblyReference.cache
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/GrpcWishlist/obj/Debug/netcoreapp2.2/GrpcWishlist.csproj.CoreCompileInputs.cache
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/GrpcWishlist/obj/Debug/netcoreapp2.2/GrpcWishlist.AssemblyInfoInputs.cache
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/GrpcWishlist/obj/Debug/netcoreapp2.2/GrpcWishlist.AssemblyInfo.cs
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/GrpcWishlist/obj/Debug/netcoreapp2.2/GrpcWishlist.dll
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/GrpcWishlist/obj/Debug/netcoreapp2.2/GrpcWishlist.pdb

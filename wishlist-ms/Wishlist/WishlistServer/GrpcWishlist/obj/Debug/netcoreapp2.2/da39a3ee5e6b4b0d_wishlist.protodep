@@ -1,0 +1,2 @@
+Wishlist.cs \
+WishlistGrpc.cs: wishlist.proto

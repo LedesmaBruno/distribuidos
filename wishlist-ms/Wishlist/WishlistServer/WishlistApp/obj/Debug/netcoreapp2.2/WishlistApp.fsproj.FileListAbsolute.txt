@@ -1,0 +1,15 @@
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/obj/Debug/netcoreapp2.2/WishlistApp.fsprojAssemblyReference.cache
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/obj/Debug/netcoreapp2.2/WishlistApp.AssemblyInfoInputs.cache
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/obj/Debug/netcoreapp2.2/WishlistApp.AssemblyInfo.fs
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/bin/Debug/netcoreapp2.2/WishlistApp.deps.json
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/bin/Debug/netcoreapp2.2/WishlistApp.dll
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/bin/Debug/netcoreapp2.2/WishlistApp.pdb
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/bin/Debug/netcoreapp2.2/GrpcWishlist.dll
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/bin/Debug/netcoreapp2.2/WishlistService.dll
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/bin/Debug/netcoreapp2.2/WishlistService.pdb
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/bin/Debug/netcoreapp2.2/GrpcWishlist.pdb
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/obj/Debug/netcoreapp2.2/WishlistApp.fsproj.CopyComplete
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/obj/Debug/netcoreapp2.2/WishlistApp.dll
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/obj/Debug/netcoreapp2.2/WishlistApp.pdb
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/bin/Debug/netcoreapp2.2/WishlistApp.runtimeconfig.json
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistApp/bin/Debug/netcoreapp2.2/WishlistApp.runtimeconfig.dev.json

@@ -1,0 +1,11 @@
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/bin/Debug/netcoreapp2.2/WishlistService.deps.json
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/bin/Debug/netcoreapp2.2/WishlistService.dll
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/bin/Debug/netcoreapp2.2/WishlistService.pdb
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/bin/Debug/netcoreapp2.2/GrpcWishlist.dll
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/bin/Debug/netcoreapp2.2/GrpcWishlist.pdb
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/obj/Debug/netcoreapp2.2/WishlistService.fsprojAssemblyReference.cache
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/obj/Debug/netcoreapp2.2/WishlistService.AssemblyInfoInputs.cache
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/obj/Debug/netcoreapp2.2/WishlistService.AssemblyInfo.fs
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/obj/Debug/netcoreapp2.2/WishlistService.fsproj.CopyComplete
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/obj/Debug/netcoreapp2.2/WishlistService.dll
+/Users/prickert/Projects/austral/distribuidos/distribuidos/wishlist-ms/Wishlist/WishlistServer/WishlistService/obj/Debug/netcoreapp2.2/WishlistService.pdb
