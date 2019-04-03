@@ -8,7 +8,8 @@ message Product {
 }
 
 service ProductService {
-    rpc GetProduct (GetProductRequest) returns (GetProductReply) {}
+    rpc GetProduct (GetProductRequest) returns (GetProductReply);
+    rpc HealthCheck (Ping) returns (Pong) {}
 }
 
 message GetProductRequest {
@@ -17,4 +18,10 @@ message GetProductRequest {
 
 message GetProductReply {
     Product product = 1;
+}
+
+message Ping {
+}
+
+message Pong {
 }
