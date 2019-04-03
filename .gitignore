@@ -6,3 +6,4 @@ target
 /.project
 /.settings
 /.sbtserver
+/users-ms/node-modules
