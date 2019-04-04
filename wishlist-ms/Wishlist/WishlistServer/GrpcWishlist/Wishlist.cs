@@ -25,24 +25,32 @@ namespace GrpcWishlist {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg53aXNobGlzdC5wcm90bxIMR3JwY1dpc2hsaXN0Ih0KD1dpc2hsaXN0UmVx",
-            "dWVzdBIKCgJpZBgBIAEoBSI1ChBXaXNobGlzdFJlc3BvbnNlEiEKBWl0ZW1z",
-            "GAEgAygLMhIuR3JwY1dpc2hsaXN0Lkl0ZW0iRAoESXRlbRIKCgJpZBgBIAEo",
-            "BRIMCgRuYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEg0KBXByaWNl",
-            "GAQgASgCIhsKDEl0ZW1zUmVxdWVzdBILCgNpZHMYASADKAUiMgoNSXRlbXNS",
-            "ZXNwb25zZRIhCgVpdGVtcxgBIAMoCzISLkdycGNXaXNobGlzdC5JdGVtMmEK",
-            "D1dpc2hsaXN0U2VydmljZRJOCgtHZXRXaXNobGlzdBIdLkdycGNXaXNobGlz",
-            "dC5XaXNobGlzdFJlcXVlc3QaHi5HcnBjV2lzaGxpc3QuV2lzaGxpc3RSZXNw",
-            "b25zZSIAMlMKDEl0ZW1zU2VydmljZRJDCghHZXRJdGVtcxIaLkdycGNXaXNo",
-            "bGlzdC5JdGVtc1JlcXVlc3QaGy5HcnBjV2lzaGxpc3QuSXRlbXNSZXNwb25z",
-            "ZWIGcHJvdG8z"));
+            "dWVzdBIKCgJpZBgBIAEoBSI7ChBXaXNobGlzdFJlc3BvbnNlEicKCHByb2R1",
+            "Y3RzGAEgAygLMhUuR3JwY1dpc2hsaXN0LlByb2R1Y3QiIwoHUHJvZHVjdBIK",
+            "CgJpZBgBIAEoBRIMCgRuYW1lGAIgASgJIhsKDEl0ZW1zUmVxdWVzdBILCgNp",
+            "ZHMYASADKAUiOAoNSXRlbXNSZXNwb25zZRInCghwcm9kdWN0cxgBIAMoCzIV",
+            "LkdycGNXaXNobGlzdC5Qcm9kdWN0IjcKEldpc2hsaXN0QWRkUmVxdWVzdBIO",
+            "CgZ1c2VySWQYASABKAUSEQoJcHJvZHVjdElkGAIgASgFIhoKCFJlc3BvbnNl",
+            "Eg4KBnN0YXR1cxgBIAEoBSIGCgRQaW5nIgYKBFBvbmcy4wEKD1dpc2hsaXN0",
+            "U2VydmljZRIzCgdHZXRQaW5nEhIuR3JwY1dpc2hsaXN0LlBpbmcaEi5HcnBj",
+            "V2lzaGxpc3QuUG9uZyIAEk4KC0dldFdpc2hsaXN0Eh0uR3JwY1dpc2hsaXN0",
+            "Lldpc2hsaXN0UmVxdWVzdBoeLkdycGNXaXNobGlzdC5XaXNobGlzdFJlc3Bv",
+            "bnNlIgASSwoNQWRkVG9XaXNoTGlzdBIgLkdycGNXaXNobGlzdC5XaXNobGlz",
+            "dEFkZFJlcXVlc3QaFi5HcnBjV2lzaGxpc3QuUmVzcG9uc2UiADJTCgxJdGVt",
+            "c1NlcnZpY2USQwoIR2V0SXRlbXMSGi5HcnBjV2lzaGxpc3QuSXRlbXNSZXF1",
+            "ZXN0GhsuR3JwY1dpc2hsaXN0Lkl0ZW1zUmVzcG9uc2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.WishlistRequest), global::GrpcWishlist.WishlistRequest.Parser, new[]{ "Id" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.WishlistResponse), global::GrpcWishlist.WishlistResponse.Parser, new[]{ "Items" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.Item), global::GrpcWishlist.Item.Parser, new[]{ "Id", "Name", "Description", "Price" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.WishlistResponse), global::GrpcWishlist.WishlistResponse.Parser, new[]{ "Products" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.Product), global::GrpcWishlist.Product.Parser, new[]{ "Id", "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.ItemsRequest), global::GrpcWishlist.ItemsRequest.Parser, new[]{ "Ids" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.ItemsResponse), global::GrpcWishlist.ItemsResponse.Parser, new[]{ "Items" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.ItemsResponse), global::GrpcWishlist.ItemsResponse.Parser, new[]{ "Products" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.WishlistAddRequest), global::GrpcWishlist.WishlistAddRequest.Parser, new[]{ "UserId", "ProductId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.Response), global::GrpcWishlist.Response.Parser, new[]{ "Status" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.Ping), global::GrpcWishlist.Ping.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcWishlist.Pong), global::GrpcWishlist.Pong.Parser, null, null, null, null)
           }));
     }
     #endregion
@@ -203,7 +211,7 @@ namespace GrpcWishlist {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public WishlistResponse(WishlistResponse other) : this() {
-      items_ = other.items_.Clone();
+      products_ = other.products_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -212,14 +220,14 @@ namespace GrpcWishlist {
       return new WishlistResponse(this);
     }
 
-    /// <summary>Field number for the "items" field.</summary>
-    public const int ItemsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::GrpcWishlist.Item> _repeated_items_codec
-        = pb::FieldCodec.ForMessage(10, global::GrpcWishlist.Item.Parser);
-    private readonly pbc::RepeatedField<global::GrpcWishlist.Item> items_ = new pbc::RepeatedField<global::GrpcWishlist.Item>();
+    /// <summary>Field number for the "products" field.</summary>
+    public const int ProductsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::GrpcWishlist.Product> _repeated_products_codec
+        = pb::FieldCodec.ForMessage(10, global::GrpcWishlist.Product.Parser);
+    private readonly pbc::RepeatedField<global::GrpcWishlist.Product> products_ = new pbc::RepeatedField<global::GrpcWishlist.Product>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::GrpcWishlist.Item> Items {
-      get { return items_; }
+    public pbc::RepeatedField<global::GrpcWishlist.Product> Products {
+      get { return products_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -235,14 +243,14 @@ namespace GrpcWishlist {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!items_.Equals(other.items_)) return false;
+      if(!products_.Equals(other.products_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= items_.GetHashCode();
+      hash ^= products_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -256,7 +264,7 @@ namespace GrpcWishlist {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      items_.WriteTo(output, _repeated_items_codec);
+      products_.WriteTo(output, _repeated_products_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -265,7 +273,7 @@ namespace GrpcWishlist {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += items_.CalculateSize(_repeated_items_codec);
+      size += products_.CalculateSize(_repeated_products_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -277,7 +285,7 @@ namespace GrpcWishlist {
       if (other == null) {
         return;
       }
-      items_.Add(other.items_);
+      products_.Add(other.products_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -290,7 +298,7 @@ namespace GrpcWishlist {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            items_.AddEntriesFrom(input, _repeated_items_codec);
+            products_.AddEntriesFrom(input, _repeated_products_codec);
             break;
           }
         }
@@ -299,11 +307,11 @@ namespace GrpcWishlist {
 
   }
 
-  public sealed partial class Item : pb::IMessage<Item> {
-    private static readonly pb::MessageParser<Item> _parser = new pb::MessageParser<Item>(() => new Item());
+  public sealed partial class Product : pb::IMessage<Product> {
+    private static readonly pb::MessageParser<Product> _parser = new pb::MessageParser<Product>(() => new Product());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Item> Parser { get { return _parser; } }
+    public static pb::MessageParser<Product> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -316,24 +324,22 @@ namespace GrpcWishlist {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Item() {
+    public Product() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Item(Item other) : this() {
+    public Product(Product other) : this() {
       id_ = other.id_;
       name_ = other.name_;
-      description_ = other.description_;
-      price_ = other.price_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Item Clone() {
-      return new Item(this);
+    public Product Clone() {
+      return new Product(this);
     }
 
     /// <summary>Field number for the "id" field.</summary>
@@ -358,35 +364,13 @@ namespace GrpcWishlist {
       }
     }
 
-    /// <summary>Field number for the "description" field.</summary>
-    public const int DescriptionFieldNumber = 3;
-    private string description_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Description {
-      get { return description_; }
-      set {
-        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "price" field.</summary>
-    public const int PriceFieldNumber = 4;
-    private float price_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Price {
-      get { return price_; }
-      set {
-        price_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Item);
+      return Equals(other as Product);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Item other) {
+    public bool Equals(Product other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -395,8 +379,6 @@ namespace GrpcWishlist {
       }
       if (Id != other.Id) return false;
       if (Name != other.Name) return false;
-      if (Description != other.Description) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Price, other.Price)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -405,8 +387,6 @@ namespace GrpcWishlist {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (Price != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Price);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -428,14 +408,6 @@ namespace GrpcWishlist {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (Description.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Description);
-      }
-      if (Price != 0F) {
-        output.WriteRawTag(37);
-        output.WriteFloat(Price);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -450,12 +422,6 @@ namespace GrpcWishlist {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Description.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
-      }
-      if (Price != 0F) {
-        size += 1 + 4;
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -463,7 +429,7 @@ namespace GrpcWishlist {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Item other) {
+    public void MergeFrom(Product other) {
       if (other == null) {
         return;
       }
@@ -472,12 +438,6 @@ namespace GrpcWishlist {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
-      }
-      if (other.Description.Length != 0) {
-        Description = other.Description;
-      }
-      if (other.Price != 0F) {
-        Price = other.Price;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -496,14 +456,6 @@ namespace GrpcWishlist {
           }
           case 18: {
             Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            Description = input.ReadString();
-            break;
-          }
-          case 37: {
-            Price = input.ReadFloat();
             break;
           }
         }
@@ -659,7 +611,7 @@ namespace GrpcWishlist {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ItemsResponse(ItemsResponse other) : this() {
-      items_ = other.items_.Clone();
+      products_ = other.products_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -668,14 +620,14 @@ namespace GrpcWishlist {
       return new ItemsResponse(this);
     }
 
-    /// <summary>Field number for the "items" field.</summary>
-    public const int ItemsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::GrpcWishlist.Item> _repeated_items_codec
-        = pb::FieldCodec.ForMessage(10, global::GrpcWishlist.Item.Parser);
-    private readonly pbc::RepeatedField<global::GrpcWishlist.Item> items_ = new pbc::RepeatedField<global::GrpcWishlist.Item>();
+    /// <summary>Field number for the "products" field.</summary>
+    public const int ProductsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::GrpcWishlist.Product> _repeated_products_codec
+        = pb::FieldCodec.ForMessage(10, global::GrpcWishlist.Product.Parser);
+    private readonly pbc::RepeatedField<global::GrpcWishlist.Product> products_ = new pbc::RepeatedField<global::GrpcWishlist.Product>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::GrpcWishlist.Item> Items {
-      get { return items_; }
+    public pbc::RepeatedField<global::GrpcWishlist.Product> Products {
+      get { return products_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -691,14 +643,14 @@ namespace GrpcWishlist {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!items_.Equals(other.items_)) return false;
+      if(!products_.Equals(other.products_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= items_.GetHashCode();
+      hash ^= products_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -712,7 +664,7 @@ namespace GrpcWishlist {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      items_.WriteTo(output, _repeated_items_codec);
+      products_.WriteTo(output, _repeated_products_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -721,7 +673,7 @@ namespace GrpcWishlist {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += items_.CalculateSize(_repeated_items_codec);
+      size += products_.CalculateSize(_repeated_products_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -733,7 +685,7 @@ namespace GrpcWishlist {
       if (other == null) {
         return;
       }
-      items_.Add(other.items_);
+      products_.Add(other.products_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -746,9 +698,497 @@ namespace GrpcWishlist {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            items_.AddEntriesFrom(input, _repeated_items_codec);
+            products_.AddEntriesFrom(input, _repeated_products_codec);
             break;
           }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class WishlistAddRequest : pb::IMessage<WishlistAddRequest> {
+    private static readonly pb::MessageParser<WishlistAddRequest> _parser = new pb::MessageParser<WishlistAddRequest>(() => new WishlistAddRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<WishlistAddRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcWishlist.WishlistReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WishlistAddRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WishlistAddRequest(WishlistAddRequest other) : this() {
+      userId_ = other.userId_;
+      productId_ = other.productId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WishlistAddRequest Clone() {
+      return new WishlistAddRequest(this);
+    }
+
+    /// <summary>Field number for the "userId" field.</summary>
+    public const int UserIdFieldNumber = 1;
+    private int userId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int UserId {
+      get { return userId_; }
+      set {
+        userId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "productId" field.</summary>
+    public const int ProductIdFieldNumber = 2;
+    private int productId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ProductId {
+      get { return productId_; }
+      set {
+        productId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as WishlistAddRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(WishlistAddRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UserId != other.UserId) return false;
+      if (ProductId != other.ProductId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UserId != 0) hash ^= UserId.GetHashCode();
+      if (ProductId != 0) hash ^= ProductId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (UserId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(UserId);
+      }
+      if (ProductId != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ProductId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (UserId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UserId);
+      }
+      if (ProductId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProductId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(WishlistAddRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UserId != 0) {
+        UserId = other.UserId;
+      }
+      if (other.ProductId != 0) {
+        ProductId = other.ProductId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            UserId = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            ProductId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Response : pb::IMessage<Response> {
+    private static readonly pb::MessageParser<Response> _parser = new pb::MessageParser<Response>(() => new Response());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Response> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcWishlist.WishlistReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Response() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Response(Response other) : this() {
+      status_ = other.status_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Response Clone() {
+      return new Response(this);
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 1;
+    private int status_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Response);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Response other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Status != other.Status) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Status != 0) hash ^= Status.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Status != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Status);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Status != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Status);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Response other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Status != 0) {
+        Status = other.Status;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Status = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Ping : pb::IMessage<Ping> {
+    private static readonly pb::MessageParser<Ping> _parser = new pb::MessageParser<Ping>(() => new Ping());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Ping> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcWishlist.WishlistReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Ping() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Ping(Ping other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Ping Clone() {
+      return new Ping(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Ping);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Ping other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Ping other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Pong : pb::IMessage<Pong> {
+    private static readonly pb::MessageParser<Pong> _parser = new pb::MessageParser<Pong>(() => new Pong());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Pong> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcWishlist.WishlistReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Pong() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Pong(Pong other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Pong Clone() {
+      return new Pong(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Pong);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Pong other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Pong other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
         }
       }
     }

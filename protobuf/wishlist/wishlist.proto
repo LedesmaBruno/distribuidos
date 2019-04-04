@@ -1,0 +1,48 @@
+syntax =  "proto3";
+
+package GrpcWishlist;
+
+message WishlistRequest {
+    int32 id = 1;
+};
+
+message WishlistResponse {
+    repeated Product products = 1;
+};
+
+message Product {
+    int32 id = 1;
+    string name = 2;
+};
+
+
+message ItemsRequest {
+    repeated int32 ids = 1;
+};
+
+message ItemsResponse {
+    repeated Product products = 1;
+};
+
+message WishlistAddRequest {
+    int32 userId = 1;
+    int32 productId = 2;
+};
+
+message Response {
+    int32 status = 1;
+};
+
+message Ping {};
+
+message Pong {};
+
+service WishlistService {
+    rpc GetPing (Ping) returns (Pong) {};
+    rpc GetWishlist (WishlistRequest) returns (WishlistResponse) {} ;
+    rpc AddToWishList (WishlistAddRequest) returns (Response) {};
+};
+
+service ItemsService {
+    rpc GetItems (ItemsRequest) returns (ItemsResponse);
+}

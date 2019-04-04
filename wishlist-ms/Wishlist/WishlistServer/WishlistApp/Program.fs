@@ -4,6 +4,8 @@ open Grpc.Core
 open System
 
 module Program = 
+    open System.Threading
+    open System.Threading.Tasks
     open GrpcWishlist
     open WishlistService.WishlistServiceImpl
 
@@ -13,10 +15,11 @@ module Program =
         let server = new Server()
         server.Services.Add(WishlistService.BindService(new WishlistServiceImpl()))
         server.Ports.Add(new ServerPort("localhost", port, ServerCredentials.Insecure)) |> ignore
-        server.Start()
-
-        Console.WriteLine("Press any key to stop the server...")
-        Console.ReadKey() |> ignore
-
-        server.ShutdownAsync().Wait()
+        Console.WriteLine("Booting server...")
+        Console.WriteLine("Press ctrl + C to exit")
+        Task.Factory.StartNew(fun () -> server.Start()) |> ignore
+        let closing = new AutoResetEvent(false)
+        let onExit = new ConsoleCancelEventHandler(fun _ args -> Console.WriteLine("Exit"); closing.Set() |> ignore)
+        Console.CancelKeyPress.AddHandler onExit
+        closing.WaitOne() |> ignore
         0

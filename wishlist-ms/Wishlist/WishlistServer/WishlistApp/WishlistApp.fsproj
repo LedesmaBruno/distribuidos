@@ -17,8 +17,4 @@
       <ProjectReference Include="..\WishlistService\WishlistService.fsproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Content Include="Dockerfile" />
-    </ItemGroup>
-
 </Project>

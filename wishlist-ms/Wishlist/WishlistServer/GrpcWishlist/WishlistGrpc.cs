@@ -12,8 +12,19 @@ namespace GrpcWishlist {
   {
     static readonly string __ServiceName = "GrpcWishlist.WishlistService";
 
+    static readonly grpc::Marshaller<global::GrpcWishlist.Ping> __Marshaller_GrpcWishlist_Ping = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcWishlist.Ping.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcWishlist.Pong> __Marshaller_GrpcWishlist_Pong = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcWishlist.Pong.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcWishlist.WishlistRequest> __Marshaller_GrpcWishlist_WishlistRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcWishlist.WishlistRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcWishlist.WishlistResponse> __Marshaller_GrpcWishlist_WishlistResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcWishlist.WishlistResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcWishlist.WishlistAddRequest> __Marshaller_GrpcWishlist_WishlistAddRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcWishlist.WishlistAddRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::GrpcWishlist.Response> __Marshaller_GrpcWishlist_Response = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcWishlist.Response.Parser.ParseFrom);
+
+    static readonly grpc::Method<global::GrpcWishlist.Ping, global::GrpcWishlist.Pong> __Method_GetPing = new grpc::Method<global::GrpcWishlist.Ping, global::GrpcWishlist.Pong>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPing",
+        __Marshaller_GrpcWishlist_Ping,
+        __Marshaller_GrpcWishlist_Pong);
 
     static readonly grpc::Method<global::GrpcWishlist.WishlistRequest, global::GrpcWishlist.WishlistResponse> __Method_GetWishlist = new grpc::Method<global::GrpcWishlist.WishlistRequest, global::GrpcWishlist.WishlistResponse>(
         grpc::MethodType.Unary,
@@ -21,6 +32,13 @@ namespace GrpcWishlist {
         "GetWishlist",
         __Marshaller_GrpcWishlist_WishlistRequest,
         __Marshaller_GrpcWishlist_WishlistResponse);
+
+    static readonly grpc::Method<global::GrpcWishlist.WishlistAddRequest, global::GrpcWishlist.Response> __Method_AddToWishList = new grpc::Method<global::GrpcWishlist.WishlistAddRequest, global::GrpcWishlist.Response>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddToWishList",
+        __Marshaller_GrpcWishlist_WishlistAddRequest,
+        __Marshaller_GrpcWishlist_Response);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -31,7 +49,17 @@ namespace GrpcWishlist {
     /// <summary>Base class for server-side implementations of WishlistService</summary>
     public abstract partial class WishlistServiceBase
     {
+      public virtual global::System.Threading.Tasks.Task<global::GrpcWishlist.Pong> GetPing(global::GrpcWishlist.Ping request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
       public virtual global::System.Threading.Tasks.Task<global::GrpcWishlist.WishlistResponse> GetWishlist(global::GrpcWishlist.WishlistRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::GrpcWishlist.Response> AddToWishList(global::GrpcWishlist.WishlistAddRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -61,6 +89,22 @@ namespace GrpcWishlist {
       {
       }
 
+      public virtual global::GrpcWishlist.Pong GetPing(global::GrpcWishlist.Ping request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::GrpcWishlist.Pong GetPing(global::GrpcWishlist.Ping request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPing, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::GrpcWishlist.Pong> GetPingAsync(global::GrpcWishlist.Ping request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::GrpcWishlist.Pong> GetPingAsync(global::GrpcWishlist.Ping request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPing, null, options, request);
+      }
       public virtual global::GrpcWishlist.WishlistResponse GetWishlist(global::GrpcWishlist.WishlistRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWishlist(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -77,6 +121,22 @@ namespace GrpcWishlist {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetWishlist, null, options, request);
       }
+      public virtual global::GrpcWishlist.Response AddToWishList(global::GrpcWishlist.WishlistAddRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddToWishList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::GrpcWishlist.Response AddToWishList(global::GrpcWishlist.WishlistAddRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddToWishList, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::GrpcWishlist.Response> AddToWishListAsync(global::GrpcWishlist.WishlistAddRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddToWishListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::GrpcWishlist.Response> AddToWishListAsync(global::GrpcWishlist.WishlistAddRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddToWishList, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override WishlistServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -89,7 +149,9 @@ namespace GrpcWishlist {
     public static grpc::ServerServiceDefinition BindService(WishlistServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetWishlist, serviceImpl.GetWishlist).Build();
+          .AddMethod(__Method_GetPing, serviceImpl.GetPing)
+          .AddMethod(__Method_GetWishlist, serviceImpl.GetWishlist)
+          .AddMethod(__Method_AddToWishList, serviceImpl.AddToWishList).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -98,7 +160,9 @@ namespace GrpcWishlist {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, WishlistServiceBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_GetPing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcWishlist.Ping, global::GrpcWishlist.Pong>(serviceImpl.GetPing));
       serviceBinder.AddMethod(__Method_GetWishlist, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcWishlist.WishlistRequest, global::GrpcWishlist.WishlistResponse>(serviceImpl.GetWishlist));
+      serviceBinder.AddMethod(__Method_AddToWishList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcWishlist.WishlistAddRequest, global::GrpcWishlist.Response>(serviceImpl.AddToWishList));
     }
 
   }

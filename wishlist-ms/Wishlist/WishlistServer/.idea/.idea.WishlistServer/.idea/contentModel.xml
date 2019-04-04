@@ -4,6 +4,9 @@
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_WishlistServer.1533901557.00" t="ExcludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+    <e p="$PROJECT_DIR$/../../../protobuf/Wishlist" t="Include">
+      <e p="wishlist.proto" t="Include" />
+    </e>
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="GrpcWishlist" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -16,13 +19,11 @@
           </e>
         </e>
         <e p="Wishlist.cs" t="Include" />
-        <e p="wishlist.proto" t="Include" />
         <e p="WishlistGrpc.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="WishlistApp" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Dockerfile" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Program.fs" t="Include" />
         <e p="WishlistApp.fsproj" t="IncludeRecursive" />
