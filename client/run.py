@@ -35,9 +35,11 @@ class LoadBalancedGRPC:
         print('Unhealthy hosts ' + str(len(self.unhealthy_stubs)))
 
         if self.count % 3 is 0:
+            # We should trigger a full async refresh
             self.refresh()
 
         if len(self.healthy_stubs) is 0:
+            # We should trigger a full async refresh
             return None
 
         response = self.grpc_service.real_call(params,self.healthy_stubs[self.cursor]['stub'])
