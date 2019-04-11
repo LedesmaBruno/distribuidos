@@ -7,6 +7,5 @@ target
 /.settings
 /.sbtserver
 users-ms/node_modules/
-users-ms/protoc/
- users-ms/package-lock.json
+users-ms/package-lock.json
 .DS_Store
