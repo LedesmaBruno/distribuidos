@@ -1,11 +1,11 @@
 {
     "ip": "0.0.0.0",
     "port": "50051",
-    "ps": {
+    "pg": {
         "user": "postgres",
         "host": "192.168.99.100",
-        "database": "pg-users",
-        "password": "docker",
+        "database": "postgres",
+        "password": "postgres",
         "port": 5432
     }
 }
