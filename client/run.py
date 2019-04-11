@@ -107,7 +107,7 @@ class GetProductService(LoadBalancedGRPC):
             }
 
 
-class AddToWishListService(LoadBalancedGRPC):
+class GetWishListService(LoadBalancedGRPC):
     def __init__(self, ips):
         super().__init__(ips,self)
 
@@ -145,9 +145,60 @@ class AddToWishListService(LoadBalancedGRPC):
             }
 
 
+class AddToWishListService(LoadBalancedGRPC):
+    def __init__(self, ips):
+        super().__init__(ips,self)
+
+    def create_stub(self,host):
+        print('Creating stub for host: ' + host)
+        channel = grpc.insecure_channel(host)
+        return wishlist_grpc.WishlistServiceStub(channel)
+
+    def real_call(self, params, stub):
+        print('Calling real call')
+        try:
+            response = stub.AddToWishList(wishlist_models.WishlistAddRequest(userId = params['userId'],productId = params['productId']), timeout= 1)
+            return {
+                'response': response,
+                'status': 'ok'
+            }
+        except grpc.RpcError as e:
+            print(e)
+            return {
+                'status':'error'
+            }
+
+    def healthcheck(self, stub):
+        try:
+            print('Calling healthcheck')
+            response = stub.HealthCheck(product_models.Ping(), timeout= 1)
+            return {
+                'response': response,
+                'status': 'ok'
+            }
+        except grpc.RpcError as e:
+            print(e)
+            return {
+                'status':'error'
+            }
+
+
+import os
+
 if __name__ == "__main__":
-    product_service = GetProductService(['192.168.0.1:9090','192.168.0.1:9091','192.168.0.1:9092'])
+    product_service_ips = [os.environ.get('PRODUCT_ENDPOINT')]
+    wishlist_service_ips = [os.environ.get('WISHLIST_ENDPOINT')]
+
+    product_service_ips.extend(['192.168.0.1:9090','192.168.0.1:9091','192.168.0.1:9092'])
+    wishlist_service_ips.extend(['192.168.0.1:9090','192.168.0.1:9091','192.168.0.1:9092'])
+
+    get_product_service = GetProductService(product_service_ips)
+    get_wishlist_service = GetWishListService(wishlist_service_ips)
+    add_wishlist_service = AddToWishListService(wishlist_service_ips)
+
+
+
 
     for i in range(1,100):
-        product_service.call({'id':1})
+        get_product_service.call({'id':1})
         time.sleep(1)

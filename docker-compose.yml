@@ -1,5 +1,10 @@
 version: '3'
 services:
+  client:
+    build: ./client
+    environment:
+    - WISHLIST_ENDPOINT=wishlist
+    - PRODUCT_ENDPOINT=product-catalog
   redis:
     image: "redis:alpine"
     ports:
@@ -12,7 +17,7 @@ services:
     build: ./wishlist-ms/Wishlist/WishlistServer
     environment:
             - REDIS_ENDPOINT=redis
-            - ITEMS_MS_ENDPOINT=items
+            - ITEMS_MS_ENDPOINT=product-catalog
     ports:
       - "8080:50051"   
   users:
@@ -23,4 +28,15 @@ services:
       - PG_HOST=postgres
       - PG_DATABASE="users"
       - PG_PASSWORD="users"
+  mongo:
+    image: mongo
+    ports:
+      - "27071:27071"
+  product-catalog:
+    build: ./product-catalog-ms
+    ports:
+      - "50000:50000"
+    environment:
+      - MONGO_IP=mongo
+
 

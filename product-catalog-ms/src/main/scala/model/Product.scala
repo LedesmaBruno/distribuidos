@@ -1,7 +1,8 @@
 package model
 
-import org.mongodb.scala.bson.annotations.BsonProperty
+import reactivemongo.bson.Macros.Annotations.Key
 
-case class Product(@BsonProperty("_id") id: Int, name: String, description: String)
+
+case class Product(@Key("_id") id: Int, name: String, description: String)
 
 
