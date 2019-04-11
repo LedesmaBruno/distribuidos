@@ -1,0 +1,16 @@
+#
+# Scala and sbt Dockerfile
+#
+# https://github.com/hseeberger/scala-sbt
+#
+
+# Pull base image
+FROM openjdk:11.0.2
+
+# Env variables
+ENV SCALA_VERSION 2.12.8
+ENV SBT_VERSION 1.2.8
+
+
+# Define working directory
+WORKDIR /root
