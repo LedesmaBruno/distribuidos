@@ -11,7 +11,7 @@ object SimpleProductClient extends App {
   implicit val ec = ExecutionContext.global
 
 
-  val channel = ManagedChannelBuilder.forAddress("localhost", 50000)
+  val channel = ManagedChannelBuilder.forAddress("192.168.99.100", 50000)
     .usePlaintext(true)
     .build()
 

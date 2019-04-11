@@ -22,3 +22,10 @@ PB.targets in Compile := Seq(
 )
 
 PB.protoSources in Compile += target.value / "../../protobuf/product-catalog"
+
+enablePlugins(JavaAppPackaging)
+enablePlugins(DockerPlugin)
+
+mainClass in Compile := Some("server.ProductServiceServer")
+
+dockerBaseImage := "openjdk:jre"
