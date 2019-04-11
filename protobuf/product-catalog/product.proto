@@ -8,8 +8,19 @@ message Product {
 }
 
 service ProductService {
+    rpc SaveProduct (SaveProductRequest) returns (Empty);
+    rpc GetAllProducts (Empty) returns (AllProducts);
     rpc GetProduct (GetProductRequest) returns (GetProductReply);
+    rpc DeleteProduct (DeleteProductRequest) returns (Empty);
     rpc HealthCheck (Ping) returns (Pong) {}
+}
+
+message SaveProductRequest {
+    Product product = 1;
+}
+
+message DeleteProductRequest {
+    int32 id = 1;
 }
 
 message GetProductRequest {
@@ -20,8 +31,15 @@ message GetProductReply {
     Product product = 1;
 }
 
+message AllProducts {
+    repeated Product product = 1;
+}
+
 message Ping {
 }
 
 message Pong {
+}
+
+message Empty {
 }

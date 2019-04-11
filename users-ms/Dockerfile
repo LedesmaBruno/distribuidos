@@ -4,10 +4,8 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --prod
 
 COPY . .
 
-EXPOSE 50051
-
-CMD ["node", "userService"]
+CMD ["node", "./app/userServer.js"]

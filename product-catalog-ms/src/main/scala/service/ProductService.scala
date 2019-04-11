@@ -1,58 +1,52 @@
 package service
 
-import catalog.product
-import catalog.product.{GetProductReply, GetProductRequest, Ping, Pong, Product, ProductServiceGrpc}
-import io.grpc.{ManagedChannelBuilder, Server, ServerBuilder}
+import catalog.product._
+import storage.ProductRepository
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.duration._
+import scala.concurrent.{Await, ExecutionContext, Future}
 
 class ProductService extends ProductServiceGrpc.ProductService {
+
+  private val productRepository = ProductRepository
+
+  implicit private val executionContext: ExecutionContext = ExecutionContext.global
+
+  override def healthCheck(request: Ping): Future[Pong] = Future.successful(Pong())
+
   override def getProduct(request: GetProductRequest): Future[GetProductReply] = {
-
-    // Todo: Retrieve from storage
-    val product = Product(id = 1, name = "Pancho")
-    val reply = GetProductReply(Option(product))
-    Future.successful(reply)
+    productRepository.findProductById(request.id)
+      .map(oP => GetProductReply(oP.map(p => p: catalog.product.Product)))
   }
 
-  override def healthCheck(request: product.Ping): Future[product.Pong] = {
-    Future.successful(Pong())
-  }
-}
-
-object ProductServiceServer extends App {
-
-  val server: Server = ServerBuilder.forPort(50000)
-    .addService(ProductServiceGrpc.bindService(new ProductService(), ExecutionContext.global))
-    .build()
-
-
-  server.start()
-  println("Running...")
-
-  server.awaitTermination()
-
-}
-
-object SimpleClient extends App {
-
-  implicit val ec = ExecutionContext.global
-
-  val channel = ManagedChannelBuilder.forAddress("localhost", 50000)
-    .usePlaintext(true)
-    .build()
-
-  val stub = ProductServiceGrpc.stub(channel)
-
-  val future: Future[GetProductReply] = stub.getProduct(GetProductRequest(1))
-  val pongFuture = stub.healthCheck(Ping())
-
-  pongFuture.onComplete(e => println(e))
-
-  future.onComplete { _ =>
-    println("Received product...")
+  override def getAllProducts(request: Empty): Future[AllProducts] = {
+    productRepository.getAllProducts
+      .map(ps => AllProducts(ps.map(p => p: catalog.product.Product)))
   }
 
-  // StdIn to prevent thread from ending
-  System.in.read()
+  override def saveProduct(request: SaveProductRequest): Future[Empty] = {
+    if (request.product.isEmpty) throw new IllegalArgumentException
+    val product = request.product.get
+    val writeResult = Await.result(productRepository.save(product), 10 seconds)
+    if (writeResult.ok)
+      Future.successful(new Empty)
+    else
+      throw new RuntimeException("Error on save operation.")
+  }
+
+  override def deleteProduct(request: DeleteProductRequest): Future[Empty] = {
+    val writeResult = Await.result(productRepository.deleteById(request.id), 10 seconds)
+    if (writeResult.ok)
+      Future.successful(new Empty)
+    else
+      throw new RuntimeException("Error on delete operation.")
+  }
+
+  implicit def convertProductToProtoProduct(product: model.Product): catalog.product.Product =
+    new catalog.product.Product(product.id, product.name)
+
+
+  implicit def parseProtoProduct(protoProduct: catalog.product.Product): model.Product =
+    model.Product(protoProduct.id, protoProduct.name, "")
 }
+
