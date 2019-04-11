@@ -1,38 +1,34 @@
-const PROTO_PATH =  '..\\..\\protobuf\\users\\user.proto';
+const messages = require('../protoc/user_pb');
+const services = require('../protoc/user_grpc_pb');
 
 const grpc = require('grpc');
-const protoLoader = require('@grpc/proto-loader');
-const config = require('../config.json');
-const db = require('../db');
+const config = require('../config');
 
-const packageDefinition = protoLoader.loadSync(PROTO_PATH, { keepCase: true });
-const protoDescriptor = grpc.loadPackageDefinition(packageDefinition);
-const services = protoDescriptor.protos;
-
-async function GetUser(call, callback) {
-    const res = await getResponse(call.request);
-    callback(null, res);
+function GetUser(call, callback) {
+    const reply = new messages.GetUserResponse();
+    const user = new messages.User();
+    user.setId(1);
+    user.setName('Bruno');
+    reply.setUser(user);
+    callback(null, reply);
 }
 
 function Healthcheck(call, callback) {
-    callback(null, { response: 'service healthy' });
+    const reply = new messages.Pong();
+    reply.setResponse('esta todo bien');
+    callback(null, reply);
 }
 
-async function getResponse(getUserRequest) {
-    const res = await db.getUserById(getUserRequest.id);
-    return { user: res };
-}
-
-function getServer() {
+function main() {
     const server = new grpc.Server();
-    server.addService(services.UserService.service, {
-        GetUser: GetUser,
-        Healthcheck: Healthcheck
+    server.addService(services.UserServiceService, {
+        getUser: GetUser,
+        healthcheck: Healthcheck
     });
-    return server;
+    
+    server.bind(config.ip + ':' + config.port, grpc.ServerCredentials.createInsecure());
+    console.log("Running...");
+    server.start();
 }
 
-const routeServer = getServer();
-routeServer.bind(config.ip + ':' + config.port, grpc.ServerCredentials.createInsecure());
-console.log('Running...');
-routeServer.start();
+main();

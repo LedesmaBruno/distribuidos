@@ -1,43 +1,35 @@
-const PROTO_PATH = '..\\..\\protobuf\\users\\user.proto';
-const config = require('../config');
+const messages = require('../protoc/user_pb');
+const services = require('../protoc/user_grpc_pb');
 
 const grpc = require('grpc');
-const protoLoader = require('@grpc/proto-loader');
+const config = require('../config');
 
-const packageDefinition = protoLoader.loadSync(
-    PROTO_PATH,
-    {
-        keepCase: true
+function main() {
+    const client = new services.UserServiceClient(config.ip + ':' + config.port, 
+        grpc.credentials.createInsecure());
+
+    const userRequest = new messages.GetUserRequest();
+    userRequest.setId(1);
+    
+    client.getUser(userRequest, (err, response) => {
+        if (err) {
+            console.error(err);
+        }
+        else {
+            console.log(response.getUser().toObject());
+        }
     });
 
-const protoDescriptor = grpc.loadPackageDefinition(packageDefinition);
-const userService = protoDescriptor.protos;
+    const ping = new messages.Ping();
 
-const _user = new userService.UserService(config.ip + ':' + config.port, grpc.credentials.createInsecure());
-
-function getUser(id) {
-    _user.GetUser({id: id}, function(err, response) {
+    client.healthcheck(ping, (err, response) => {
         if (err) {
-            handleError(err);
-        } else {
-            console.log(response);
+            console.error(err);
+        }
+        else {
+            console.log(response.toObject());
         }
     });
 }
 
-function healthcheck() {
-    _user.Healthcheck({}, function(err, response) {
-        if (err) {
-            handleError(err);
-        } else {
-            console.log(response);
-        }
-    });
-}
-
-function handleError(err) {
-    console.error('Houston, we got a problem', err);
-}
-
-getUser(1);
-healthcheck();
+main();
