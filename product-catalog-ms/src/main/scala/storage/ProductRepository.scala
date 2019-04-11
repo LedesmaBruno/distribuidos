@@ -1,35 +1,40 @@
 package storage
 
-import com.mongodb.client.model.Filters
 import model.Product
-import org.mongodb.scala.MongoCollection
+import reactivemongo.api.Cursor
+import reactivemongo.api.collections.bson.BSONCollection
+import reactivemongo.bson.{BSONDocument, BSONDocumentReader, BSONDocumentWriter, Macros}
 
-import scala.concurrent.Future
+import scala.concurrent.{ExecutionContext, ExecutionContextExecutor, Future}
 
 object ProductRepository {
 
-  private val productsCollection: MongoCollection[Product] = MongoDB.DB.getCollection("products")
+  implicit val executionContext: ExecutionContextExecutor = ExecutionContext.global
 
-  def getProductById(id: Int): Future[Option[Product]] =
-    productsCollection find Filters.eq("_id", id) first() toFutureOption
+  private val productsCollection: Future[BSONCollection] = MongoDB.getCollection("products")
 
-  def getAllProducts: Future[Seq[Product]] = productsCollection find() toFuture
-
-  def save(product: Product) = {
-    productsCollection insertOne product toFutureOption()
-    //    productsCollection insertOne product subscribe(
-    //      (_: Completed) => println("New Product was saved successfully."),
-    //      (e: Throwable) => throw new RuntimeException(e),
-    //      () => Unit
-    //    )
+  def findProductById(id: Int): Future[Option[Product]] ={
+    val query = BSONDocument("_id" -> id)
+    productsCollection.flatMap(_.find[BSONDocument, Product](query).one)
   }
+
+  def getAllProducts: Future[Seq[Product]] = {
+    val query = BSONDocument()
+    productsCollection
+      .flatMap(_
+        .find[BSONDocument, Product](query)
+        .cursor[Product]()
+        .collect[List](-1, Cursor.FailOnError[List[Product]]()))
+  }
+
+  def save(product: Product) = productsCollection.flatMap(_.insert.one(product))
 
   def deleteById(id: Int) = {
-    productsCollection deleteOne Filters.eq("_id", id) toFutureOption()
-    //    productsCollection deleteOne Filters.eq ("_id", id) subscribe (
-    //      (result : DeleteResult) => println("Product with ID: " + id + " was deleted successfully."),
-    //      (e: Throwable) => throw new RuntimeException(e),
-    //      () => Unit
-    //    )
+    val selector = BSONDocument("_id" -> id)
+    productsCollection.flatMap(_.delete.one(q = selector))
   }
+
+  implicit def productWriter: BSONDocumentWriter[Product] = Macros.writer[Product]
+
+  implicit def personReader: BSONDocumentReader[Product] = Macros.reader[Product]
 }
