@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jdk
 
 COPY . /service/
 
@@ -6,6 +6,8 @@ WORKDIR /service/
 
 ENV SCALA_VERSION 2.12.8
 ENV SBT_VERSION 1.2.8
+
+
 
 # Install Scala
 ## Piping curl directly in tar
@@ -24,7 +26,7 @@ RUN \
   sbt compile && \
   sbt build
 
-CMD["scala", "src/main/scala/server/ProductServiceServer"]
+ENTRYPOINT ["scala", "src/main/scala/server/ProductServiceServer"]
 
 
 
