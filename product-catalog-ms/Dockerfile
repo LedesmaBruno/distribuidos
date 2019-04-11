@@ -1,6 +1,8 @@
 FROM openjdk:8-jdk-alpine
 
-COPY . /service/
+COPY . /service/product-catalog/
+
+COPY ../protobuf/ /service/protobuf/
 
 WORKDIR /service/
 
@@ -24,7 +26,7 @@ RUN \
   sbt compile && \
   sbt build
 
-CMD["scala", "src/main/scala/server/ProductServiceServer"]
+ENTRYPOINT S["scala", "src/main/scala/server/ProductServiceServer"]
 
 
 
