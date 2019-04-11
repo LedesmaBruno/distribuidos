@@ -1,11 +1,11 @@
 logs
 target
-/.idea
-/.idea_modules
-/.classpath
-/.project
-/.settings
-/.sbtserver
+.idea
+.idea_modules
+.classpath
+.project
+.settings
+.sbtserver
 users-ms/node_modules/
 users-ms/protoc/
  users-ms/package-lock.json
