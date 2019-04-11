@@ -28,14 +28,12 @@ services:
       - PG_HOST=postgres
       - PG_DATABASE="users"
       - PG_PASSWORD="users"
-
   mongo:
     image: mongo
     ports:
       - "27071:27071"
-
   product-catalog:
-    build: ./product-catalog-ms/
+    build: ./product-catalog-ms
     ports:
       - "50000:50000"
     environment:

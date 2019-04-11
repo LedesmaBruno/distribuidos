@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jdk
 
 COPY . /service/product-catalog/
 
@@ -26,7 +26,7 @@ RUN \
   sbt compile && \
   sbt build
 
-ENTRYPOINT S["scala", "src/main/scala/server/ProductServiceServer"]
+ENTRYPOINT ["scala", "src/main/scala/server/ProductServiceServer"]
 
 
 
