@@ -1,5 +1,10 @@
 version: '3'
 services:
+  client:
+    build: ./client
+    environment:
+    - WISHLIST_ENDPOINT=wishlist
+    - PRODUCT_ENDPOINT=product-catalog
   redis:
     image: "redis:alpine"
     ports:
