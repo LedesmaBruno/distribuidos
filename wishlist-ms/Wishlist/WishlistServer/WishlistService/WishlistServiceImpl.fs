@@ -22,3 +22,7 @@ module WishlistServiceImpl =
             let response =  new WishlistResponse()
             response.Products.AddRange(items.Products)
             response|> Task.FromResult
+            
+        override this.RemoveFromWishlist( request: WishlistAddRequest, context: ServerCallContext) : Task<Response> =
+            RedisService.RemoveFromWishlist(request.UserId, request.ProductId) |> ignore
+            new Response(Status = 200)|> Task.FromResult

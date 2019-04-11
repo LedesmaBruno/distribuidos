@@ -40,6 +40,13 @@ namespace GrpcWishlist {
         __Marshaller_GrpcWishlist_WishlistAddRequest,
         __Marshaller_GrpcWishlist_Response);
 
+    static readonly grpc::Method<global::GrpcWishlist.WishlistAddRequest, global::GrpcWishlist.Response> __Method_RemoveFromWishlist = new grpc::Method<global::GrpcWishlist.WishlistAddRequest, global::GrpcWishlist.Response>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RemoveFromWishlist",
+        __Marshaller_GrpcWishlist_WishlistAddRequest,
+        __Marshaller_GrpcWishlist_Response);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -60,6 +67,11 @@ namespace GrpcWishlist {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::GrpcWishlist.Response> AddToWishList(global::GrpcWishlist.WishlistAddRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::GrpcWishlist.Response> RemoveFromWishlist(global::GrpcWishlist.WishlistAddRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -137,6 +149,22 @@ namespace GrpcWishlist {
       {
         return CallInvoker.AsyncUnaryCall(__Method_AddToWishList, null, options, request);
       }
+      public virtual global::GrpcWishlist.Response RemoveFromWishlist(global::GrpcWishlist.WishlistAddRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveFromWishlist(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::GrpcWishlist.Response RemoveFromWishlist(global::GrpcWishlist.WishlistAddRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveFromWishlist, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::GrpcWishlist.Response> RemoveFromWishlistAsync(global::GrpcWishlist.WishlistAddRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveFromWishlistAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::GrpcWishlist.Response> RemoveFromWishlistAsync(global::GrpcWishlist.WishlistAddRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveFromWishlist, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override WishlistServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -151,7 +179,8 @@ namespace GrpcWishlist {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetPing, serviceImpl.GetPing)
           .AddMethod(__Method_GetWishlist, serviceImpl.GetWishlist)
-          .AddMethod(__Method_AddToWishList, serviceImpl.AddToWishList).Build();
+          .AddMethod(__Method_AddToWishList, serviceImpl.AddToWishList)
+          .AddMethod(__Method_RemoveFromWishlist, serviceImpl.RemoveFromWishlist).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -163,6 +192,7 @@ namespace GrpcWishlist {
       serviceBinder.AddMethod(__Method_GetPing, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcWishlist.Ping, global::GrpcWishlist.Pong>(serviceImpl.GetPing));
       serviceBinder.AddMethod(__Method_GetWishlist, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcWishlist.WishlistRequest, global::GrpcWishlist.WishlistResponse>(serviceImpl.GetWishlist));
       serviceBinder.AddMethod(__Method_AddToWishList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcWishlist.WishlistAddRequest, global::GrpcWishlist.Response>(serviceImpl.AddToWishList));
+      serviceBinder.AddMethod(__Method_RemoveFromWishlist, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcWishlist.WishlistAddRequest, global::GrpcWishlist.Response>(serviceImpl.RemoveFromWishlist));
     }
 
   }
