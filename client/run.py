@@ -38,7 +38,7 @@ class LoadBalancedGRPC:
             # We should trigger a full async refresh
             self.refresh()
 
-        if len(self.healthy_stubs) is 0:
+        if len(self.healthy_stubs) is 0 or retries > 2:
             # We should trigger a full async refresh
             return None
 
