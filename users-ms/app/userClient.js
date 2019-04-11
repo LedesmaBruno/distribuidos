@@ -2,7 +2,7 @@ const messages = require('../protoc/user_pb');
 const services = require('../protoc/user_grpc_pb');
 
 const grpc = require('grpc');
-const config = require('../config');
+const config = require('./config.js');
 
 function main() {
     const client = new services.UserServiceClient(config.ip + ':' + config.port, 
