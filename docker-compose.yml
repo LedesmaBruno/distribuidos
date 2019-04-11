@@ -4,10 +4,23 @@ services:
     image: "redis:alpine"
     ports:
      - "6379:6379"
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
   wishlist:
     build: ./wishlist-ms/Wishlist/WishlistServer
     environment:
             - REDIS_ENDPOINT=redis
             - ITEMS_MS_ENDPOINT=items
     ports:
-      - "8080:50051"          
+      - "8080:50051"   
+  users:
+    build: ./users-ms/
+    environment:
+      - MS_HOST=users
+      - PG_USER="users"
+      - PG_HOST=postgres
+      - PG_DATABASE="users"
+      - PG_PASSWORD="users"
+
