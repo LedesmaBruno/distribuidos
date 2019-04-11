@@ -41,6 +41,7 @@ service WishlistService {
     rpc GetPing (Ping) returns (Pong) {};
     rpc GetWishlist (WishlistRequest) returns (WishlistResponse) {} ;
     rpc AddToWishList (WishlistAddRequest) returns (Response) {};
+    rpc RemoveFromWishlist (WishlistAddRequest) returns (Response) {};
 };
 
 service ItemsService {
