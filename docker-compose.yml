@@ -4,3 +4,10 @@ services:
     image: "redis:alpine"
     ports:
      - "6379:6379"
+  wishlist:
+    build: ./wishlist-ms/Wishlist/WishlistServer
+    environment:
+            - REDIS_ENDPOINT=redis
+            - ITEMS_MS_ENDPOINT=items
+    ports:
+      - "8080:50051"          
