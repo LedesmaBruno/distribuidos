@@ -3,6 +3,7 @@ package storage
 import model.Product
 import reactivemongo.api.Cursor
 import reactivemongo.api.collections.bson.BSONCollection
+import reactivemongo.api.commands.WriteResult
 import reactivemongo.bson.{BSONDocument, BSONDocumentReader, BSONDocumentWriter, Macros}
 
 import scala.concurrent.{ExecutionContext, ExecutionContextExecutor, Future}
@@ -27,9 +28,9 @@ object ProductRepository {
         .collect[List](-1, Cursor.FailOnError[List[Product]]()))
   }
 
-  def save(product: Product) = productsCollection.flatMap(_.insert.one(product))
+  def save(product: Product): Future[WriteResult] = productsCollection.flatMap(_.insert.one(product))
 
-  def deleteById(id: Int) = {
+  def deleteById(id: Int): Future[WriteResult] = {
     val selector = BSONDocument("_id" -> id)
     productsCollection.flatMap(_.delete.one(q = selector))
   }

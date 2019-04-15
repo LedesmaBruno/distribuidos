@@ -3,8 +3,8 @@ package service
 import catalog.product._
 import storage.ProductRepository
 
-import scala.concurrent.duration._
-import scala.concurrent.{Await, ExecutionContext, Future}
+import scala.concurrent.{ExecutionContext, Future}
+import scala.language.implicitConversions
 
 class ProductService extends ProductServiceGrpc.ProductService {
 
@@ -15,31 +15,21 @@ class ProductService extends ProductServiceGrpc.ProductService {
   override def healthCheck(request: Ping): Future[Pong] = Future.successful(Pong())
 
   override def getProduct(request: GetProductRequest): Future[GetProductReply] = {
-    productRepository.findProductById(request.id)
-      .map(oP => GetProductReply(oP.map(p => p: catalog.product.Product)))
+    productRepository findProductById request.id map (oP => GetProductReply(oP map (p => p: catalog.product.Product)))
   }
 
   override def getAllProducts(request: Empty): Future[AllProducts] = {
-    productRepository.getAllProducts
-      .map(ps => AllProducts(ps.map(p => p: catalog.product.Product)))
+    productRepository.getAllProducts map (ps => AllProducts(ps map (p => p: catalog.product.Product)))
   }
 
   override def saveProduct(request: SaveProductRequest): Future[Empty] = {
     if (request.product.isEmpty) throw new IllegalArgumentException
     val product = request.product.get
-    val writeResult = Await.result(productRepository.save(product), 10 seconds)
-    if (writeResult.ok)
-      Future.successful(new Empty)
-    else
-      throw new RuntimeException("Error on save operation.")
+    productRepository save product map (_ => new Empty)
   }
 
   override def deleteProduct(request: DeleteProductRequest): Future[Empty] = {
-    val writeResult = Await.result(productRepository.deleteById(request.id), 10 seconds)
-    if (writeResult.ok)
-      Future.successful(new Empty)
-    else
-      throw new RuntimeException("Error on delete operation.")
+    productRepository deleteById request.id map (_ => new Empty)
   }
 
   implicit def convertProductToProtoProduct(product: model.Product): catalog.product.Product =
