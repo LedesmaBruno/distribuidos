@@ -1,5 +1,5 @@
 const config = {
-    ip: process.env.MS_HOST,
+    ip: 'localhost',
     port: 8081,
     pg: {
         user: process.env.PG_USER,
