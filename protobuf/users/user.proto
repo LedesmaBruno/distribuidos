@@ -12,7 +12,7 @@ message User {
 
 service UserService {
     rpc GetUser (GetUserRequest) returns (GetUserResponse);
-    rpc GetUserByLastAccess(LastAccessRequest) returns (stream GetUserResponse);
+    rpc GetUsersByLastAccess(LastAccessRequest) returns (stream GetUserResponse);
     rpc Healthcheck (Ping) returns (Pong);
 }
 
