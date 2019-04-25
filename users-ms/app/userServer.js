@@ -20,6 +20,22 @@ function GetUser(call, callback) {
     callback(null, reply);
 }
 
+function GetUserByLastAccess(call, callback) {
+    const users = db.getUserByLastAccess(call.request.getBefore(), call.request.getAfter());
+
+    for(user in users) {
+        const reply = new messages.GetUserResponse();
+        const user = new messages.User();
+        user.setId(user.id);
+        user.setName(user.name);
+        user.surname(user.surname);
+        user.email(user.email);
+        user.lastAccess(user.lastAccess);
+        reply.setUser(user);
+        callback(null, reply);
+    }
+}
+
 function Healthcheck(call, callback) {
     const reply = new messages.Pong();
     reply.setResponse('esta todo bien');
@@ -30,6 +46,7 @@ function main() {
     const server = new grpc.Server();
     server.addService(services.UserServiceService, {
         getUser: GetUser,
+        getUserByLastAccess: GetUserByLastAccess,
         healthcheck: Healthcheck
     });
     
