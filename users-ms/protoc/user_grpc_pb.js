@@ -26,6 +26,17 @@ function deserialize_protos_GetUserResponse(buffer_arg) {
   return user_pb.GetUserResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_protos_LastAccessRequest(arg) {
+  if (!(arg instanceof user_pb.LastAccessRequest)) {
+    throw new Error('Expected argument of type protos.LastAccessRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_protos_LastAccessRequest(buffer_arg) {
+  return user_pb.LastAccessRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_protos_Ping(arg) {
   if (!(arg instanceof user_pb.Ping)) {
     throw new Error('Expected argument of type protos.Ping');
@@ -58,6 +69,17 @@ var UserServiceService = exports.UserServiceService = {
     responseType: user_pb.GetUserResponse,
     requestSerialize: serialize_protos_GetUserRequest,
     requestDeserialize: deserialize_protos_GetUserRequest,
+    responseSerialize: serialize_protos_GetUserResponse,
+    responseDeserialize: deserialize_protos_GetUserResponse,
+  },
+  getUsersByLastAccess: {
+    path: '/protos.UserService/GetUsersByLastAccess',
+    requestStream: false,
+    responseStream: true,
+    requestType: user_pb.LastAccessRequest,
+    responseType: user_pb.GetUserResponse,
+    requestSerialize: serialize_protos_LastAccessRequest,
+    requestDeserialize: deserialize_protos_LastAccessRequest,
     responseSerialize: serialize_protos_GetUserResponse,
     responseDeserialize: deserialize_protos_GetUserResponse,
   },
