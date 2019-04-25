@@ -6,7 +6,6 @@ const pool = new Pool(config.pg);
 async function getUserById(id) {
     return await pool.connect()
         .then(client => {
-            console.log('connected');
             client.query('SELECT * FROM users WHERE id = $1', [id])
                 .then(res => {
                     client.release()
@@ -14,10 +13,23 @@ async function getUserById(id) {
                 })
                 .catch(err => {
                     client.release();
-                    console.error(err);
                 });
-        })
-        .catch(console.error);
+        });
+}
+
+
+async function getUserByLastAccess(before = Date.now().getTime(), after = Date.now().getTime()) {
+    return await pool.connect()
+        .then(client => {
+            client.query('SELECT * FROM users WHERE lastAccess BETWEEN $1 AND $2', [before, after])
+                .then(res => {
+                    client.release();
+                    return res;
+                })
+                .catch(err => {
+                    client.release();
+                });
+        });
 }
 
 module.exports = { getUserById }
