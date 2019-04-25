@@ -5,6 +5,9 @@ package protos;
 message User {
     int32 id = 1;
     string name = 2;
+    string surname = 3;
+    string email = 4;
+    int32 lastAccess = 5;
 }
 
 service UserService {
