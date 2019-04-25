@@ -33,10 +33,8 @@ services:
     ports:
       - "27071:27071"
   product-catalog:
-    build: ./product-catalog-ms
+    image: product-catalog-ms:0.1.0-SNAPSHOT
     ports:
       - "50000:50000"
     environment:
       - MONGO_IP=mongo
-
-

@@ -12,9 +12,8 @@ object ProductServiceServer extends App {
     .addService(ProductServiceGrpc.bindService(new ProductService(), ExecutionContext.global))
     .build()
 
-
   server.start()
-  println("Running...")
+  println("Product service is running...")
 
   server.awaitTermination()
 

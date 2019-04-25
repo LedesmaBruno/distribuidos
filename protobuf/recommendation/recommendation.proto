@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package recommendation;
+
+service RecommendationService {
+    rpc HealthCheck (Ping) returns (Pong);
+    rpc SupplyRecommendation (SupplyRecommendationRequest) returns (Empty);
+}
+
+message SupplyRecommendationRequest {
+    int32 userId = 1;
+}
+
+message Empty {}
+
+message Ping {}
+
+message Pong {}
+
