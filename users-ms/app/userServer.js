@@ -20,18 +20,7 @@ function GetUser(call, callback) {
 
 function GetUsersByLastAccess(call, callback) {
     const users = db.getUsersByLastAccess(call.request.getBefore(), call.request.getAfter());
-
-    for(user in users) {
-        const reply = new messages.GetUserResponse();
-        const user = new messages.User();
-        user.setId(user.id);
-        user.setName(user.name);
-        user.surname(user.surname);
-        user.email(user.email);
-        user.lastAccess(user.lastAccess);
-        reply.setUser(user);
-        callback(null, reply);
-    }
+    callback(null, users);
 }
 
 function Healthcheck(call, callback) {
