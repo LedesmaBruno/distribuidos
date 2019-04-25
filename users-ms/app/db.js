@@ -17,8 +17,7 @@ async function getUserById(id) {
         });
 }
 
-
-async function getUserByLastAccess(before = Date.now().getTime(), after = Date.now().getTime()) {
+async function getUsersByLastAccess(before = Date.now().getTime(), after = Date.now().getTime()) {
     return await pool.connect()
         .then(client => {
             client.query('SELECT * FROM users WHERE lastAccess BETWEEN $1 AND $2', [before, after])
@@ -32,4 +31,4 @@ async function getUserByLastAccess(before = Date.now().getTime(), after = Date.n
         });
 }
 
-module.exports = { getUserById }
+module.exports = { getUserById, getUsersByLastAccess }
