@@ -9,8 +9,6 @@ function GetUser(call, callback) {
 
     const userFromDB = db.getUserById(call.request.getId());
 
-    console.log(userFromDB);
-
     const reply = new messages.GetUserResponse();
     const user = new messages.User();
     user.setId(userFromDB.id);
