@@ -18,7 +18,7 @@ function GetUser(call, callback) {
     callback(null, reply);
 }
 
-function GetUserByLastAccess(call, callback) {
+function GetUsersByLastAccess(call, callback) {
     const users = db.getUsersByLastAccess(call.request.getBefore(), call.request.getAfter());
 
     for(user in users) {
@@ -44,7 +44,7 @@ function main() {
     const server = new grpc.Server();
     server.addService(services.UserServiceService, {
         getUser: GetUser,
-        getUserByLastAccess: GetUserByLastAccess,
+        getUsersByLastAccess: GetUsersByLastAccess,
         healthcheck: Healthcheck
     });
     
