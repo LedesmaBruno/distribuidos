@@ -19,7 +19,7 @@ function GetUser(call, callback) {
 }
 
 function GetUserByLastAccess(call, callback) {
-    const users = db.getUserByLastAccess(call.request.getBefore(), call.request.getAfter());
+    const users = db.getUsersByLastAccess(call.request.getBefore(), call.request.getAfter());
 
     for(user in users) {
         const reply = new messages.GetUserResponse();
