@@ -2,12 +2,12 @@ const config = {
     ip: 'localhost',
     port: 8081,
     pg: {
-        user: process.env.PG_USER,
-        host: process.env.PG_HOST,
-        database: process.env.PG_DATABASE,
-        password: process.env.PG_PASSWORD,
+        user: 'users',
+        host: '192.168.99.100',
+        database: 'users',
+        password: 'users',
         port: 5432
     }
 };
 
-module.exports = config
+module.exports = config;
