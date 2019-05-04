@@ -69,14 +69,6 @@ function getUsersByLastAccess(before, after) {
 }
 
 function main() {
-    // addUser({
-    //     name: 'test_name',
-    //     surname: 'test_surname',
-    //     email: 'test@test.com'
-    // });
-
-    // getUser(1);
-    // deleteUser(12);
     const before = new Date();
     before.setDate(2);
     const after = new Date();
