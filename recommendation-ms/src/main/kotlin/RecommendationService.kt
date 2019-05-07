@@ -12,6 +12,16 @@ class RecommendationService : RecommendationServiceGrpc.RecommendationServiceImp
         request: Recommendation.SupplyRecommendationRequest?,
         responseObserver: StreamObserver<Recommendation.Empty>?
     ) {
+        val userId = request?.userId
+        if (userId != null) {
+            /**
+             * Request to wishlist, the products.
+             * Then, make a request to product catalog with the names.
+             * Generate recommendation with the product information received.
+             * Send Email to the user.
+              */
+        }
 
+        responseObserver?.onCompleted()
     }
 }
