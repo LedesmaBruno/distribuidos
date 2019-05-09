@@ -1,14 +1,15 @@
-import com.ibm.etcd.api.KeyValue;
-import com.ibm.etcd.api.RangeResponse;
-import com.ibm.etcd.client.EtcdClient;
-import com.ibm.etcd.client.kv.KvClient;
+import io.etcd.jetcd.ByteSequence;
+import io.etcd.jetcd.Client;
+import io.etcd.jetcd.KV;
+import io.etcd.jetcd.kv.GetResponse;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
 import java.io.IOException;
 import java.net.Inet4Address;
-
-import static com.ibm.etcd.client.KeyUtils.bs;
+import java.nio.charset.StandardCharsets;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 
 public class EmailServer {
 
@@ -32,27 +33,27 @@ public class EmailServer {
 
             System.out.println("Email service is running...");
             server.awaitTermination();
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException | InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
     }
 
-    private static void register(String myIP, int myPort) {
-//        KvStoreClient client = EtcdClusterConfig.fromJsonFile(filePath).getClient();
+    private static void register(String myIP, int myPort) throws ExecutionException, InterruptedException {
 //        TODO set real etcd endppoint.
-        EtcdClient etcdClient = EtcdClient.forEndpoints("http://127.0.0.1:2379").build();
-        KvClient kvClient = etcdClient.getKvClient();
+        Client client = Client.builder().endpoints("http://127.0.0.1:2379").build();
+        KV kvClient = client.getKVClient();
 
-//        RangeResponse result = kvClient.get(bs("foo")).sync();
-//        dumpRangeResponse(result);
+        ByteSequence key = ByteSequence.from(("/services/email/" + myIP + ":" + myPort).getBytes());
+        ByteSequence value = ByteSequence.from((myIP + ":" + myPort).getBytes());
 
-        kvClient.put(bs("/services/email/" + myIP + ":" + myPort), bs(myIP + ":" + myPort)).sync();
-    }
+        kvClient.put(key, value).get();
 
-    private static void dumpRangeResponse(RangeResponse rr) {
-        for(int i=0;i<rr.getKvsCount();i++) {
-            KeyValue kv=rr.getKvs(i);
-            System.out.println(i+" : "+kv.getKey().toStringUtf8()+" : "+kv.getValue().toStringUtf8());
-        }
+//        CompletableFuture<GetResponse> getFuture = kvClient.get(key);
+//
+//        GetResponse response = getFuture.get();
+//        response.getKvs().forEach(keyValue ->
+//                System.out.println(new String(keyValue.getKey().getBytes(), StandardCharsets.UTF_8)));
+//
+//        kvClient.delete(key).get();
     }
 }

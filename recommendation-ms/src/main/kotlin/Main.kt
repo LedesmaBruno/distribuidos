@@ -1,7 +1,10 @@
-import com.ibm.etcd.client.EtcdClient
-import com.ibm.etcd.client.KeyUtils.bs
+import io.etcd.jetcd.ByteSequence
+import io.etcd.jetcd.Client
+import io.etcd.jetcd.KV
 import io.grpc.ServerBuilder
+import service.RecommendationService
 import java.net.Inet4Address
+import java.util.concurrent.CompletableFuture
 
 fun main(args: Array<String>) {
     val myPort = 70000
@@ -24,10 +27,12 @@ fun main(args: Array<String>) {
 }
 
 fun register(myIP: String?, myPort: Int) {
-//        TODO set real etcd endppoint.
-    val etcdClient = EtcdClient.forEndpoints("http://localhost:2379").build()
+//    TODO set real etcd endppoint.
+    val etcdClient = Client.builder().endpoints("http://127.0.0.1:2379").build()
     val kvClient = etcdClient.kvClient
-    kvClient.put(bs("/services/recommendation/$myIP:$myPort"), bs("$myIP:$myPort")).sync()
 
+    val key = ByteSequence.from(("/services/recommendation/$myIP:$myPort").toByteArray())
+    val value = ByteSequence.from(("$myIP:$myPort").toByteArray())
 
+    kvClient.put(key, value).get()
 }
