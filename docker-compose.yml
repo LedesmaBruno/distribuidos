@@ -37,3 +37,4 @@ services:
       - "50000:50000"
     environment:
       - MONGO_IP=mongo
+      - ETCD_ENDPOINT=etcd

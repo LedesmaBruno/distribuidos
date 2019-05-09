@@ -1,5 +1,3 @@
-// 192.168.99.100 es la ip de la VM en donde esta docker (Docker Toolbox)
-
 const config = {
     ip: 'localhost',
     port: 8081,

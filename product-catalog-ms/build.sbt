@@ -15,6 +15,7 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-simple" % "1.7.5",
   "ch.qos.logback" % "logback-classic" % "1.2.3" % Test,
   "log4j" % "log4j" % "1.2.14",
+  "com.ibm.etcd" % "etcd-java" % "0.0.10",
 )
 
 PB.targets in Compile := Seq(
