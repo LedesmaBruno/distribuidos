@@ -31,7 +31,7 @@ dependencies {
     compile "io.grpc:grpc-netty:${grpcVersion}"
     compile "io.grpc:grpc-protobuf:${grpcVersion}"
     compile "io.grpc:grpc-stub:${grpcVersion}"
-    compile "io.etcd:jetcd-core:0.3.0"
+    compile "com.ibm.etcd:etcd-java:0.0.10"
 }
 
 idea {

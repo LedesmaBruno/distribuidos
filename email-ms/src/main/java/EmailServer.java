@@ -1,14 +1,13 @@
-import io.etcd.jetcd.ByteSequence;
-import io.etcd.jetcd.Client;
-import io.etcd.jetcd.KV;
-import io.etcd.jetcd.kv.GetResponse;
+import com.google.protobuf.ByteString;
+import com.ibm.etcd.client.EtcdClient;
+import com.ibm.etcd.client.KeyUtils;
+import com.ibm.etcd.client.lease.PersistentLease;
+import com.ibm.etcd.client.utils.PersistentLeaseKey;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
 import java.io.IOException;
 import java.net.Inet4Address;
-import java.nio.charset.StandardCharsets;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 public class EmailServer {
@@ -39,21 +38,13 @@ public class EmailServer {
     }
 
     private static void register(String myIP, int myPort) throws ExecutionException, InterruptedException {
-//        TODO set real etcd endppoint.
-        Client client = Client.builder().endpoints("http://127.0.0.1:2379").build();
-        KV kvClient = client.getKVClient();
+        EtcdClient etcdClient = EtcdClient.forEndpoint("localhost",2379).withPlainText().build();
 
-        ByteSequence key = ByteSequence.from(("/services/email/" + myIP + ":" + myPort).getBytes());
-        ByteSequence value = ByteSequence.from((myIP + ":" + myPort).getBytes());
+        ByteString key = KeyUtils.bs("/services/email/" + myIP + ":" + myPort);
+        ByteString value = KeyUtils.bs(myIP + ":" + myPort);
 
-        kvClient.put(key, value).get();
-
-//        CompletableFuture<GetResponse> getFuture = kvClient.get(key);
-//
-//        GetResponse response = getFuture.get();
-//        response.getKvs().forEach(keyValue ->
-//                System.out.println(new String(keyValue.getKey().getBytes(), StandardCharsets.UTF_8)));
-//
-//        kvClient.delete(key).get();
+        PersistentLease req = etcdClient.getLeaseClient().maintain().minTtl(2).start();
+        PersistentLeaseKey plk = new PersistentLeaseKey(etcdClient,req,key,value,null);
+        plk.start();
     }
 }
