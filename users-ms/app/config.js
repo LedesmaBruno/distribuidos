@@ -9,7 +9,7 @@ const config = {
         port: 5432
     },
     etcd: {
-        hosts: ['localhost']
+        hosts: '192.168.99.100:2379'
     }
 };
 
