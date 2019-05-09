@@ -17,7 +17,6 @@ services:
     build: ./wishlist-ms/Wishlist/WishlistServer
     environment:
             - REDIS_ENDPOINT=redis
-            - ITEMS_MS_ENDPOINT=product-catalog
     ports:
       - "8080:50051"   
   users:

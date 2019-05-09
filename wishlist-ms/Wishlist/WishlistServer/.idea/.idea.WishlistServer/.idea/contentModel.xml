@@ -21,22 +21,23 @@
         <e p="Wishlist.cs" t="Include" />
         <e p="WishlistGrpc.cs" t="Include" />
       </e>
+      <e p="Main" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="IProductsService.cs" t="Include" />
+        <e p="IRedisService.cs" t="Include" />
+        <e p="Main.cs" t="Include" />
+        <e p="Main.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="Main.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="WishlistServiceImpl.cs" t="Include" />
+      </e>
       <e p="packages" t="ExcludeRecursive" />
-      <e p="WishlistApp" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="Program.fs" t="Include" />
-        <e p="WishlistApp.fsproj" t="IncludeRecursive" />
-      </e>
       <e p="WishlistServer.sln" t="IncludeFlat" />
-      <e p="WishlistService" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="GrpcService.fs" t="Include" />
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="RedisService.fs" t="Include" />
-        <e p="WishlistService.fsproj" t="IncludeRecursive" />
-        <e p="WishlistServiceImpl.fs" t="Include" />
-      </e>
     </e>
   </component>
 </project>

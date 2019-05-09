@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="Grpc.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad">
+        <HintPath>..\..\..\..\..\..\..\..\.nuget\packages\grpc.core\1.19.0\lib\netstandard1.5\Grpc.Core.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\WishlistService\WishlistService.fsproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+      <PackageReference Include="ServiceStack.Redis" Version="5.5.0" />
+    </ItemGroup>
+
+</Project>
