@@ -5,7 +5,7 @@ const grpc = require('grpc');
 const config = require('./config.js');
 const db = require('./db.js');
 const Etcd = require('node-etcd');
-const ip = require('ip');
+const Ip = require('ip');
 
 function GetUser(call, callback) {
 
@@ -86,13 +86,15 @@ function Healthcheck(call, callback) {
 }
 
 function configETCD() {
+    const ip = Ip.address();
+    const key = '/services/users' + host;
+    const value = String(ip + ':' + config.port);
+
     const etcd = new Etcd(config.etcd.hosts);
-    const p = etcd.join('/', 'services', 'users');
-    etcd.set(p, 
-        JSON.stringify({
-            hostname: ip.address(),
-            port: config.port
-        }));
+    etcd.set(key, value, console.log);
+
+    // para hacer un get
+    // etcd.get(key, (err, res) => console.log(res.node.nodes.map(r => r.value)));
 }
 
 function main() {

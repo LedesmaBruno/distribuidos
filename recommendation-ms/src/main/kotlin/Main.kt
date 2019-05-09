@@ -1,13 +1,12 @@
-import io.etcd.jetcd.ByteSequence
-import io.etcd.jetcd.Client
-import io.etcd.jetcd.KV
+import com.ibm.etcd.client.EtcdClient
+import com.ibm.etcd.client.KeyUtils.bs
 import io.grpc.ServerBuilder
 import service.RecommendationService
 import java.net.Inet4Address
 import java.util.concurrent.CompletableFuture
 
 fun main(args: Array<String>) {
-    val myPort = 70000
+    val myPort = 7000
 
     val server = ServerBuilder
         .forPort(myPort)
