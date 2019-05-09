@@ -6,6 +6,7 @@ const config = require('./config.js');
 const db = require('./db.js');
 const Etcd = require('node-etcd');
 const Ip = require('ip');
+const UserPool = require('./userPool.js');
 
 function GetUser(call, callback) {
 
@@ -97,8 +98,16 @@ function configETCD() {
     // etcd.get(key, (err, res) => console.log(res.node.nodes.map(r => r.value)));
 }
 
+function fillDB() {
+    const users = UserPool.getUsers(20);
+    for(let user in users) {
+        db.addUser(user);
+    }
+}
+
 function main() {
     configETCD();
+    fillDB();
     const server = new grpc.Server();
     server.addService(services.UserServiceService, {
         addUser: AddUser,
