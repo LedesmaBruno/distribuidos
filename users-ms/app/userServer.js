@@ -87,8 +87,10 @@ function Healthcheck(call, callback) {
 
 function configETCD() {
     const ip = Ip.address();
+    const host = String(ip + ':' + config.port);
+
     const etcd = new Etcd(config.etcd.hosts);
-    etcd.set('/services/users/' + String(ip), String(ip), { ttl: 60 }, console.log);
+    etcd.set('/services/users/' + host, host, console.log);
 }
 
 function main() {
