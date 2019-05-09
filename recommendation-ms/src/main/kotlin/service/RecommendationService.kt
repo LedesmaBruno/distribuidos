@@ -1,5 +1,7 @@
 package service
 
+import external.loadbalancer.ServiceLB
+import com.ibm.etcd.client.EtcdClient
 import external.EmailServiceClient
 import external.UserServiceClient
 import external.WishlistServiceClient
@@ -7,7 +9,14 @@ import io.grpc.stub.StreamObserver
 import recommendation.Recommendation
 import recommendation.RecommendationServiceGrpc
 
-class RecommendationService : RecommendationServiceGrpc.RecommendationServiceImplBase() {
+class RecommendationService(etcdClient: EtcdClient) : RecommendationServiceGrpc.RecommendationServiceImplBase() {
+
+    private val wishlistServiceLB =
+        ServiceLB(etcdClient, "/services/wishlist/", WishlistServiceClient::class.java)
+    private val userServiceLB =
+        ServiceLB(etcdClient, "/services/users/", UserServiceClient::class.java)
+    private val emailServiceLB =
+        ServiceLB(etcdClient, "/services/email/", EmailServiceClient::class.java)
 
     override fun healthCheck(request: Recommendation.Ping?, responseObserver: StreamObserver<Recommendation.Pong>?) {
 
@@ -19,22 +28,21 @@ class RecommendationService : RecommendationServiceGrpc.RecommendationServiceImp
     ) {
         val userId = request?.userId
         if (userId != null) {
-            /**
-             * Generate recommendation with the product information received.
-             */
+            val userResponse = userServiceLB.getRandomClient().getUserById(userId)
+            val userEmailAddress = userResponse?.user?.email
 
-            //TODO: Reescribir esto para que sigan el mismo formato que los otros objetos que son instanciables
+            val wishlistResponse = wishlistServiceLB.getRandomClient().getWishlist(userId)
 
-            // TODO generate msg from product names in the wishlist
-            //val wishlistResponse = WishlistServiceClient.getWishlist(userId)
+            var msg = "BUY: "
+            wishlistResponse?.productsList?.forEach { product ->
+                msg += product.name
+            }
 
-            //TODO get email from user
-            //val user = UserServiceClient.getUserById(userId)
+            println("Message that will be sent: $msg")
+            if (userEmailAddress != null) {
+                emailServiceLB.getRandomClient().sendEmail(userEmailAddress, msg)
+            }
 
-            val address = "address"
-            val msg = "promo"
-
-            EmailServiceClient.sendEmail(address, msg)
         }
 
         responseObserver?.onCompleted()

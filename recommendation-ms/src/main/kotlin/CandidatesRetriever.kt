@@ -11,19 +11,19 @@ object CandidatesRetriever {
     fun run(recommendationWorkers: RangeCache,userClients: RangeCache){
         synchronized(imLeader) {
             if(imLeader) {
-                val userClient = userClients
+                val userServiceStubs = userClients
                     .keySet()
-                    .stream()
-                    .collect(Collectors.toList())[Random().nextInt(userClients.size())]
+                    .stream().map {
+                        val d = it.toStringUtf8().split(":")
+                        UserServiceClient(d[0],d[1])
+                    }
+                    .collect(Collectors.toList())
 
-                val data = userClient.toStringUtf8().split(":")
-                val stub = UserServiceClient(data[0],data[1])
+                val candidates = userServiceStubs.first().getUsersWithLastAccess()
 
-                val candidates = stub.getUsersWithLastAccess()
-
-                val stubs = userClients.keySet().stream().map {
+                val stubs = recommendationWorkers.keySet().stream().map {
                     val d = it.toStringUtf8().split(":")
-                    RecommendationServiceClient(data[0],data[1])
+                    RecommendationServiceClient(d[0],d[1])
                 }.collect(Collectors.toList())
 
                 candidates?.userList?.forEach {
