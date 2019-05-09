@@ -7,6 +7,9 @@ const config = {
         database: 'users',
         password: 'users',
         port: 5432
+    },
+    etcd: {
+        hosts: ['localhost']
     }
 };
 
