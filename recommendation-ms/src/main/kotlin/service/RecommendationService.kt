@@ -23,11 +23,13 @@ class RecommendationService : RecommendationServiceGrpc.RecommendationServiceImp
              * Generate recommendation with the product information received.
              */
 
+            //TODO: Reescribir esto para que sigan el mismo formato que los otros objetos que son instanciables
+
             // TODO generate msg from product names in the wishlist
-            val wishlistResponse = WishlistServiceClient.getWishlist(userId)
+            //val wishlistResponse = WishlistServiceClient.getWishlist(userId)
 
             //TODO get email from user
-            val user = UserServiceClient.getUserById(userId)
+            //val user = UserServiceClient.getUserById(userId)
 
             val address = "address"
             val msg = "promo"

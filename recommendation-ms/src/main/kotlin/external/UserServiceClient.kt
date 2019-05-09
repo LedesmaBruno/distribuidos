@@ -15,4 +15,11 @@ class UserServiceClient(host:String, port:String) {
         val response = service.getUsersByLastAccess(request).get()
         return response
     }
+
+    fun getUserById(userId:Int): UserOuterClass.GetUserResponse? {
+        println("Requesting to get User")
+        val request = UserOuterClass.GetUserRequest.newBuilder().setId(userId).build()
+        val response = service.getUser(request).get()
+        return response
+    }
 }
