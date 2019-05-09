@@ -5,13 +5,17 @@ import com.ibm.etcd.client.utils.RangeCache
 import java.net.InetAddress
 
 object LeaderElection {
-    private const val leaderKey: String = "recommendation/master/"
-    private const val hostsKey: String = "recommendation/hosts/"
+    private const val leaderKey: String = "/master/recommendation/"
+    private const val hostsKey: String = "/services/recommendation/"
 
-    fun resolveLeader(client: EtcdClient,listener: EtcdLeaderElection.ElectionListener){
+    var election: EtcdLeaderElection? = null
+
+    fun resolveLeader(client: EtcdClient,listener: EtcdLeaderElection.ElectionListener,myPort: Int){
         val me = InetAddress.getLocalHost().hostAddress
-        val e = EtcdLeaderElection(client,ByteString.copyFromUtf8(leaderKey),me)
+        val e = EtcdLeaderElection(client,ByteString.copyFromUtf8(leaderKey), "$me:$myPort")
         e.addListener(listener)
+        e.start()
+        election = e
     }
 
     fun register(client: EtcdClient): RangeCache {
