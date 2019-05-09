@@ -1,4 +1,4 @@
-export function get(n = 10) {
+function get(n = 10) {
     const users = [];
     let i = 0;
     while (i < n) {
@@ -13,3 +13,10 @@ export function get(n = 10) {
     }
     return users;
 }
+
+(function fillDB() {
+    const users = UserPool.get(20);
+    for(let user in users) {
+        db.addUser(user);
+    }
+}());
