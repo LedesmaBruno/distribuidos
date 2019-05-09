@@ -14,8 +14,8 @@ fun main(args: Array<String>) {
     server.start()
 
     val myIP = Inet4Address.getLocalHost().hostAddress
-    println("Recommendation Server Host IP: " + myIP)
-    println("Listening on " + myPort)
+    println("Recommendation Server Host IP: $myIP")
+    println("Listening on $myPort")
 
     register(myIP, myPort)
 
@@ -25,7 +25,9 @@ fun main(args: Array<String>) {
 
 fun register(myIP: String?, myPort: Int) {
 //        TODO set real etcd endppoint.
-    val etcdClient = EtcdClient.forEndpoint("ETCD-endpoint", 2372).build()
+    val etcdClient = EtcdClient.forEndpoints("http://localhost:2379").build()
     val kvClient = etcdClient.kvClient
-    kvClient.put(bs("email-server-container-address"), bs("$myIP:$myPort")).sync()
+    kvClient.put(bs("/services/recommendation/$myIP:$myPort"), bs("$myIP:$myPort")).sync()
+
+
 }
