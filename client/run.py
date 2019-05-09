@@ -197,8 +197,6 @@ if __name__ == "__main__":
     add_wishlist_service = AddToWishListService(wishlist_service_ips)
 
 
-
-
     for i in range(1,100):
         get_product_service.call({'id':1})
         time.sleep(1)

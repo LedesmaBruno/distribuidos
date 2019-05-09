@@ -32,6 +32,7 @@ dependencies {
     compile "io.grpc:grpc-protobuf:${grpcVersion}"
     compile "io.grpc:grpc-stub:${grpcVersion}"
     compile 'com.ibm.etcd:etcd-java:0.0.10'
+    compile group: 'io.etcd', name: 'jetcd-core', version: '0.3.0'
 }
 
 idea {

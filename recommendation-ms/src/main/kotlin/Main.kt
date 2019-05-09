@@ -4,7 +4,7 @@ import io.grpc.ServerBuilder
 import java.net.Inet4Address
 
 fun main(args: Array<String>) {
-    val myPort = 70000
+    val myPort = 7000
 
     val server = ServerBuilder
         .forPort(myPort)
@@ -25,7 +25,9 @@ fun main(args: Array<String>) {
 
 fun register(myIP: String?, myPort: Int) {
 //        TODO set real etcd endppoint.
-    val etcdClient = EtcdClient.forEndpoints("http://localhost:2379").build()
+    val etcdClient = EtcdClient.forEndpoints("192.168.99.100:2379").build()
+
+
     val kvClient = etcdClient.kvClient
     kvClient.put(bs("/services/recommendation/$myIP:$myPort"), bs("$myIP:$myPort")).sync()
 
