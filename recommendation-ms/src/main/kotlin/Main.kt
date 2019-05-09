@@ -1,35 +1,28 @@
 import com.ibm.etcd.client.EtcdClient
 import com.ibm.etcd.client.KeyUtils.bs
-import com.ibm.etcd.client.lease.PersistentLease
+import com.ibm.etcd.client.utils.EtcdLeaderElection
 import com.ibm.etcd.client.utils.PersistentLeaseKey
+import com.ibm.etcd.client.utils.RangeCache
 import io.grpc.ServerBuilder
 import service.RecommendationService
 import java.net.Inet4Address
-import java.util.concurrent.CompletableFuture
-import com.ibm.etcd.client.KeyUtils.bs
-import com.google.common.collect.ComparisonChain.start
-import com.ibm.etcd.client.utils.EtcdLeaderElection
-import com.ibm.etcd.client.utils.RangeCache
 import java.util.*
 
 
 fun main(args: Array<String>) {
-
-    val myPort = Random().nextInt() % 1000 + 1000
-    val server = ServerBuilder
-        .forPort(myPort)
-        .addService(RecommendationService())
-        .build()
-
-    server.start()
-
+    val myPort = Random().nextInt() % 100 + 1000
     val myIP = Inet4Address.getLocalHost().hostAddress
     println("Recommendation Server Host IP: $myIP")
     println("Listening on $myPort")
 
     val etcdClient = register(myIP, myPort)
 
+    val server = ServerBuilder
+        .forPort(myPort)
+        .addService(RecommendationService(etcdClient))
+        .build()
 
+    server.start()
 
     LeaderElection.resolveLeader(
         etcdClient,
@@ -38,7 +31,7 @@ fun main(args: Array<String>) {
             if(isLeader){
                 println("I am the master")
                 val recommenderServices = LeaderElection.register(etcdClient)
-                val userServices = RangeCache(etcdClient,bs("/service/user/"))
+                val userServices = RangeCache(etcdClient,bs("/services/users/"))
                 CandidatesRetriever.elected(recommenderServices,userServices)
             } else {
                 println("Just a simple peasant")
@@ -53,7 +46,6 @@ fun main(args: Array<String>) {
 
 fun register(myIP: String?, myPort: Int): EtcdClient {
     val etcdClient = EtcdClient.forEndpoint("127.0.0.1",2379).withPlainText().build()
-    val kvClient = etcdClient.kvClient
 
     val key = bs("/services/recommendation/$myIP:$myPort")
     val value = bs("$myIP:$myPort")
