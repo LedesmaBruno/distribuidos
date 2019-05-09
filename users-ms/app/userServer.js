@@ -90,16 +90,22 @@ function configETCD() {
     const ip = Ip.address();
     const key = '/services/users' + host;
     const value = String(ip + ':' + config.port);
+    const ttl = { ttl: 60 };
 
     const etcd = new Etcd(config.etcd.hosts);
-    etcd.set(key, value, console.log);
+    etcd.set(key, value, ttl, console.log);
+
+    const watcher = etcd.watcher(key);
+    watcher.on('delete', () => {
+        etcd.set(key, value, ttl, console.log);
+    });
 
     // para hacer un get
     // etcd.get(key, (err, res) => console.log(res.node.nodes.map(r => r.value)));
 }
 
 function fillDB() {
-    const users = UserPool.getUsers(20);
+    const users = UserPool.get(20);
     for(let user in users) {
         db.addUser(user);
     }

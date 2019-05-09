@@ -1,4 +1,4 @@
-export function getUsers(n = 10) {
+export function get(n = 10) {
     const users = [];
     let i = 0;
     while (i < n) {
