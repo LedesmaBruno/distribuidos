@@ -3,9 +3,9 @@ function get(n = 10) {
     let i = 0;
     while (i < n) {
         const u = {
-            name: 'name-' + i,
-            surname: 'surname-' + i,
-            email: 'test' + i + '@test.com',
+            name: `name-${i}`,
+            surname: `surname-${i}`,
+            email: `test${i}@test.com`,
             lastAccess: new Date()
         }
         users.push(u);
