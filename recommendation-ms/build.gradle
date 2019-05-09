@@ -78,7 +78,7 @@ protobuf {
 sourceSets {
     main {
         proto {
-            srcDir '../protobuf/recommendation'
+            srcDir '../protobuf'
         }
         java {
             srcDirs += 'build/generated/source/proto/main/grpc'
