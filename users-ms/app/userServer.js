@@ -87,10 +87,14 @@ function Healthcheck(call, callback) {
 
 function configETCD() {
     const ip = Ip.address();
-    const host = String(ip + ':' + config.port);
+    const key = '/services/users' + host;
+    const value = String(ip + ':' + config.port);
 
     const etcd = new Etcd(config.etcd.hosts);
-    etcd.set('/services/users/' + host, host, console.log);
+    etcd.set(key, value, console.log);
+
+    // para hacer un get
+    // etcd.get(key, (err, res) => console.log(res.node.nodes.map(r => r.value)));
 }
 
 function main() {
